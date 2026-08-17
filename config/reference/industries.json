@@ -1,0 +1,782 @@
+[
+  {
+    "id": "ind_5EnS8agsQ0ubXRZUjo7fZx",
+    "object": "v3.reference.industry",
+    "name": "Advertising/Marketing services",
+    "symbol_count": 517
+  },
+  {
+    "id": "ind_xTXZJohfYl-GVnaSomsgwC",
+    "object": "v3.reference.industry",
+    "name": "Aerospace & defense",
+    "symbol_count": 1134
+  },
+  {
+    "id": "ind_1LW4SDmveq718dDbs6O-4V",
+    "object": "v3.reference.industry",
+    "name": "Agricultural commodities/Milling",
+    "symbol_count": 1399
+  },
+  {
+    "id": "ind_6YZsS6FaaZLUut6q2TzUGz",
+    "object": "v3.reference.industry",
+    "name": "Air freight/Couriers",
+    "symbol_count": 548
+  },
+  {
+    "id": "ind__VCy97mYxXKM4kLGShG-Ch",
+    "object": "v3.reference.industry",
+    "name": "Airlines",
+    "symbol_count": 451
+  },
+  {
+    "id": "ind_OYQiNgVH-_XNMVR_xJsFe2",
+    "object": "v3.reference.industry",
+    "name": "Alternative power generation",
+    "symbol_count": 366
+  },
+  {
+    "id": "ind_u6S6pf5eLKmlY0gi3bWkD3",
+    "object": "v3.reference.industry",
+    "name": "Aluminum",
+    "symbol_count": 203
+  },
+  {
+    "id": "ind_Rlwd7X8SuJVxckp3PbmixB",
+    "object": "v3.reference.industry",
+    "name": "Apparel/Footwear",
+    "symbol_count": 1074
+  },
+  {
+    "id": "ind_Mb3cNaXssD0K-FTUwwxKGx",
+    "object": "v3.reference.industry",
+    "name": "Apparel/Footwear retail",
+    "symbol_count": 471
+  },
+  {
+    "id": "ind_VhSTUwJdps0qXUbNapUxcQ",
+    "object": "v3.reference.industry",
+    "name": "Auto parts: OEM",
+    "symbol_count": 1234
+  },
+  {
+    "id": "ind_uFlmY-SKRAXKOgSVU_7JKP",
+    "object": "v3.reference.industry",
+    "name": "Automotive aftermarket",
+    "symbol_count": 212
+  },
+  {
+    "id": "ind_OO-4Z2kZ_FDoLHq3_LCWyX",
+    "object": "v3.reference.industry",
+    "name": "Beverages: alcoholic",
+    "symbol_count": 550
+  },
+  {
+    "id": "ind_KsQe8E2pfj-7_rnpoFTy8_",
+    "object": "v3.reference.industry",
+    "name": "Beverages: non-alcoholic",
+    "symbol_count": 334
+  },
+  {
+    "id": "ind_JeMC1NXQb994RYLLA1ATSN",
+    "object": "v3.reference.industry",
+    "name": "Biotechnology",
+    "symbol_count": 1535
+  },
+  {
+    "id": "ind_Wsju3ysQ5LuLcepSOxXju7",
+    "object": "v3.reference.industry",
+    "name": "Broadcasting",
+    "symbol_count": 260
+  },
+  {
+    "id": "ind_TTPLaqeXxNSxmK0qkxWHg5",
+    "object": "v3.reference.industry",
+    "name": "Building products",
+    "symbol_count": 533
+  },
+  {
+    "id": "ind_yKqTBZyKy8yMZlZMzfjiBz",
+    "object": "v3.reference.industry",
+    "name": "Cable/Satellite TV",
+    "symbol_count": 145
+  },
+  {
+    "id": "ind_4osue9LeZMcnvYdm7UV-sV",
+    "object": "v3.reference.industry",
+    "name": "Casinos/Gaming",
+    "symbol_count": 196
+  },
+  {
+    "id": "ind_lN5_1hMCi3kJ_JinJgq76W",
+    "object": "v3.reference.industry",
+    "name": "Catalog/Specialty distribution",
+    "symbol_count": 31
+  },
+  {
+    "id": "ind_Xg8Zs2HErZDdlKT8rzpRuT",
+    "object": "v3.reference.industry",
+    "name": "Chemicals: agricultural",
+    "symbol_count": 508
+  },
+  {
+    "id": "ind_yo7x1BIdQRnD2TjQTFXlrf",
+    "object": "v3.reference.industry",
+    "name": "Chemicals: major diversified",
+    "symbol_count": 491
+  },
+  {
+    "id": "ind_nBdrrrub_CNcte3sUgiKPp",
+    "object": "v3.reference.industry",
+    "name": "Chemicals: specialty",
+    "symbol_count": 1640
+  },
+  {
+    "id": "ind_Oelr11rugGzdYz5g9LGg7v",
+    "object": "v3.reference.industry",
+    "name": "Coal",
+    "symbol_count": 267
+  },
+  {
+    "id": "ind_skzvc71HPJ4QRahHq9s3iO",
+    "object": "v3.reference.industry",
+    "name": "Commercial printing/Forms",
+    "symbol_count": 248
+  },
+  {
+    "id": "ind_OhW0PPRgW50achSC7yN7xc",
+    "object": "v3.reference.industry",
+    "name": "Computer communications",
+    "symbol_count": 167
+  },
+  {
+    "id": "ind_t3sCPHoErWO0IJqMbb4PgW",
+    "object": "v3.reference.industry",
+    "name": "Computer peripherals",
+    "symbol_count": 529
+  },
+  {
+    "id": "ind_zRyNsBA462tLpl9Nr0bVGC",
+    "object": "v3.reference.industry",
+    "name": "Computer processing hardware",
+    "symbol_count": 347
+  },
+  {
+    "id": "ind_DFfythgrmWQmncCutZFm1V",
+    "object": "v3.reference.industry",
+    "name": "Construction materials",
+    "symbol_count": 879
+  },
+  {
+    "id": "ind_MA5FDwTW93ERWMXQiorNOq",
+    "object": "v3.reference.industry",
+    "name": "Consumer sundries",
+    "symbol_count": 78
+  },
+  {
+    "id": "ind_Xzh3B9xzlcjKX4TUZPGuPZ",
+    "object": "v3.reference.industry",
+    "name": "Containers/Packaging",
+    "symbol_count": 732
+  },
+  {
+    "id": "ind_7PoUo_gcCxBvmIkE7ZinL6",
+    "object": "v3.reference.industry",
+    "name": "Contract drilling",
+    "symbol_count": 182
+  },
+  {
+    "id": "ind_hUyLDpa5pBdlsuwWMZeTGm",
+    "object": "v3.reference.industry",
+    "name": "Data processing services",
+    "symbol_count": 544
+  },
+  {
+    "id": "ind_oh07NujJfz0l9ExAqIhCSf",
+    "object": "v3.reference.industry",
+    "name": "Department stores",
+    "symbol_count": 261
+  },
+  {
+    "id": "ind_qQ-lfxOXWc-EFI2_8zm3sT",
+    "object": "v3.reference.industry",
+    "name": "Discount stores",
+    "symbol_count": 85
+  },
+  {
+    "id": "ind_8g3UQcFDZMYU5-ySVOrSJV",
+    "object": "v3.reference.industry",
+    "name": "Drugstore chains",
+    "symbol_count": 108
+  },
+  {
+    "id": "ind_o0057E2V4t2wzutAeuSv7r",
+    "object": "v3.reference.industry",
+    "name": "Electric utilities",
+    "symbol_count": 1888
+  },
+  {
+    "id": "ind_3vWySIQ9uwiJ6pkXQ4nTNb",
+    "object": "v3.reference.industry",
+    "name": "Electrical products",
+    "symbol_count": 1975
+  },
+  {
+    "id": "ind_JZI8-Ckf295NaDC0xo-hJ1",
+    "object": "v3.reference.industry",
+    "name": "Electronic components",
+    "symbol_count": 789
+  },
+  {
+    "id": "ind_S8johdYQKcAx0W29e2OX67",
+    "object": "v3.reference.industry",
+    "name": "Electronic equipment/Instruments",
+    "symbol_count": 852
+  },
+  {
+    "id": "ind_8wsrsBw3F9toK7s9Ftzwda",
+    "object": "v3.reference.industry",
+    "name": "Electronic production equipment",
+    "symbol_count": 725
+  },
+  {
+    "id": "ind_6cllIM2qGmQlPANUUSMNcl",
+    "object": "v3.reference.industry",
+    "name": "Electronics distributors",
+    "symbol_count": 410
+  },
+  {
+    "id": "ind_p9_04obLHOLFISeTFipP_E",
+    "object": "v3.reference.industry",
+    "name": "Electronics/Appliance stores",
+    "symbol_count": 159
+  },
+  {
+    "id": "ind__NF4fG2GY8WmV9oxMP10Hn",
+    "object": "v3.reference.industry",
+    "name": "Electronics/Appliances",
+    "symbol_count": 444
+  },
+  {
+    "id": "ind_1Vt3YyZPDSjbd0UCzp0Chw",
+    "object": "v3.reference.industry",
+    "name": "Engineering & construction",
+    "symbol_count": 2593
+  },
+  {
+    "id": "ind_KdJwMKqkt8K_-nhQMiSjD8",
+    "object": "v3.reference.industry",
+    "name": "Environmental services",
+    "symbol_count": 341
+  },
+  {
+    "id": "ind_soqUekMOr5aT1AL7I5bKIK",
+    "object": "v3.reference.industry",
+    "name": "Finance/Rental/Leasing",
+    "symbol_count": 1645
+  },
+  {
+    "id": "ind_DRQp7WLOg7iMjAVCseIfdx",
+    "object": "v3.reference.industry",
+    "name": "Financial conglomerates",
+    "symbol_count": 2244
+  },
+  {
+    "id": "ind_mYicHSEmSgvr6Prfv3a6Ah",
+    "object": "v3.reference.industry",
+    "name": "Financial publishing/Services",
+    "symbol_count": 141
+  },
+  {
+    "id": "ind_CM0_QoXEAKEsduRzKPfSp4",
+    "object": "v3.reference.industry",
+    "name": "Food distributors",
+    "symbol_count": 293
+  },
+  {
+    "id": "ind_Qi2CkujAa5isIK9C-MFBgz",
+    "object": "v3.reference.industry",
+    "name": "Food retail",
+    "symbol_count": 490
+  },
+  {
+    "id": "ind_hvqvhqv-unfeAG_1TSvTSh",
+    "object": "v3.reference.industry",
+    "name": "Food: major diversified",
+    "symbol_count": 363
+  },
+  {
+    "id": "ind_FQ3XpTRbXtijNcHWgkrpSv",
+    "object": "v3.reference.industry",
+    "name": "Food: meat/fish/dairy",
+    "symbol_count": 509
+  },
+  {
+    "id": "ind_s6ZgsgkAUR29TsbWQ3vBvV",
+    "object": "v3.reference.industry",
+    "name": "Food: specialty/candy",
+    "symbol_count": 1025
+  },
+  {
+    "id": "ind_3wqx9APzDQ2ev9q0nDTFXe",
+    "object": "v3.reference.industry",
+    "name": "Forest products",
+    "symbol_count": 280
+  },
+  {
+    "id": "ind_mSLlvWFs1gCklIeddpXsGh",
+    "object": "v3.reference.industry",
+    "name": "Gas distributors",
+    "symbol_count": 488
+  },
+  {
+    "id": "ind_g9y5Jm6COCW9wDlDE7aQTS",
+    "object": "v3.reference.industry",
+    "name": "General government",
+    "symbol_count": 8
+  },
+  {
+    "id": "ind_b_v5Hc6a0aDMXUjcsiTwDF",
+    "object": "v3.reference.industry",
+    "name": "Home furnishings",
+    "symbol_count": 433
+  },
+  {
+    "id": "ind_NmoLwy_ZDekgmc0PAzoYKT",
+    "object": "v3.reference.industry",
+    "name": "Home improvement chains",
+    "symbol_count": 146
+  },
+  {
+    "id": "ind_NcsrhH-aikEK5KvY_SJGBa",
+    "object": "v3.reference.industry",
+    "name": "Homebuilding",
+    "symbol_count": 556
+  },
+  {
+    "id": "ind_fAcluDTV-tsbB2d5eTsNOo",
+    "object": "v3.reference.industry",
+    "name": "Hospital/Nursing management",
+    "symbol_count": 404
+  },
+  {
+    "id": "ind_awumTi69kfAMw0vfBZBzjY",
+    "object": "v3.reference.industry",
+    "name": "Hotels/Resorts/Cruise lines",
+    "symbol_count": 714
+  },
+  {
+    "id": "ind_ybyUebhll3Ju0BN7wTsg39",
+    "object": "v3.reference.industry",
+    "name": "Household/Personal care",
+    "symbol_count": 691
+  },
+  {
+    "id": "ind_Lx9oWdV7j8M963pw_gDcsb",
+    "object": "v3.reference.industry",
+    "name": "Industrial conglomerates",
+    "symbol_count": 176
+  },
+  {
+    "id": "ind_Y-9w2s6wgL_YJFPrGDtYuE",
+    "object": "v3.reference.industry",
+    "name": "Industrial machinery",
+    "symbol_count": 3117
+  },
+  {
+    "id": "ind_pnbkQu8TSRoU7E1_u1ov9L",
+    "object": "v3.reference.industry",
+    "name": "Industrial specialties",
+    "symbol_count": 820
+  },
+  {
+    "id": "ind_zIEWji4cZX4m6aExJr1iGI",
+    "object": "v3.reference.industry",
+    "name": "Information technology services",
+    "symbol_count": 2191
+  },
+  {
+    "id": "ind_0u4FDkxD3SMSxiJSTHtcI4",
+    "object": "v3.reference.industry",
+    "name": "Insurance brokers/Services",
+    "symbol_count": 181
+  },
+  {
+    "id": "ind_SrFWIavvkLg2emRz3JkAiv",
+    "object": "v3.reference.industry",
+    "name": "Integrated oil",
+    "symbol_count": 1021
+  },
+  {
+    "id": "ind_muHebKueN6Z9AHtoDVKNqj",
+    "object": "v3.reference.industry",
+    "name": "Internet retail",
+    "symbol_count": 501
+  },
+  {
+    "id": "ind_vuRsmjIYEJQwKrQI7dPbbU",
+    "object": "v3.reference.industry",
+    "name": "Internet software/Services",
+    "symbol_count": 1172
+  },
+  {
+    "id": "ind_VUgoyFuZyGmuau6tNZ26Kc",
+    "object": "v3.reference.industry",
+    "name": "Investment banks/Brokers",
+    "symbol_count": 1492
+  },
+  {
+    "id": "ind_g9-G7BeVDMv6l6SV_BhMXs",
+    "object": "v3.reference.industry",
+    "name": "Investment managers",
+    "symbol_count": 1520
+  },
+  {
+    "id": "ind_5B4TcBV9JRjyx_kHoscpD4",
+    "object": "v3.reference.industry",
+    "name": "Investment trusts",
+    "symbol_count": 2393
+  },
+  {
+    "id": "ind_tVsH8Eqiyy-3_2H6mAuN2_",
+    "object": "v3.reference.industry",
+    "name": "Life/Health insurance",
+    "symbol_count": 368
+  },
+  {
+    "id": "ind_PRSkssqYGHjA5af7yaEuap",
+    "object": "v3.reference.industry",
+    "name": "Major banks",
+    "symbol_count": 1819
+  },
+  {
+    "id": "ind_l1B9zmXvbClqjUYKUazBWk",
+    "object": "v3.reference.industry",
+    "name": "Major telecommunications",
+    "symbol_count": 453
+  },
+  {
+    "id": "ind_-QkXd1wYsJeD0_aSq9rgVT",
+    "object": "v3.reference.industry",
+    "name": "Managed health care",
+    "symbol_count": 126
+  },
+  {
+    "id": "ind_BuHrqelpQtDTx_U_c6goRL",
+    "object": "v3.reference.industry",
+    "name": "Marine shipping",
+    "symbol_count": 752
+  },
+  {
+    "id": "ind_xeu95fd7I4o9aqyhy_VBjY",
+    "object": "v3.reference.industry",
+    "name": "Media conglomerates",
+    "symbol_count": 51
+  },
+  {
+    "id": "ind_2bxkeKn9auPGm4dy1DPkQS",
+    "object": "v3.reference.industry",
+    "name": "Medical distributors",
+    "symbol_count": 390
+  },
+  {
+    "id": "ind_ynBdLniHM79HYSTtjFJyNM",
+    "object": "v3.reference.industry",
+    "name": "Medical specialties",
+    "symbol_count": 2227
+  },
+  {
+    "id": "ind_2PdS2fbBJICDnAD85Kvib6",
+    "object": "v3.reference.industry",
+    "name": "Medical/Nursing services",
+    "symbol_count": 627
+  },
+  {
+    "id": "ind_66b7s881qGzGcZLNwQlUun",
+    "object": "v3.reference.industry",
+    "name": "Metal fabrication",
+    "symbol_count": 655
+  },
+  {
+    "id": "ind__3xzQvP1Kb5assUMkgqS1l",
+    "object": "v3.reference.industry",
+    "name": "Miscellaneous",
+    "symbol_count": 192
+  },
+  {
+    "id": "ind_XaWqXCHcWbRLSX_8rQZwGh",
+    "object": "v3.reference.industry",
+    "name": "Miscellaneous commercial services",
+    "symbol_count": 2889
+  },
+  {
+    "id": "ind_048QGMtUjXErQq_J4bC-Ah",
+    "object": "v3.reference.industry",
+    "name": "Miscellaneous manufacturing",
+    "symbol_count": 559
+  },
+  {
+    "id": "ind_pD5PHNS3ZgVlFXacbedIu9",
+    "object": "v3.reference.industry",
+    "name": "Motor vehicles",
+    "symbol_count": 926
+  },
+  {
+    "id": "ind_CCK6WJkwGCELFINjoIlYEQ",
+    "object": "v3.reference.industry",
+    "name": "Movies/Entertainment",
+    "symbol_count": 815
+  },
+  {
+    "id": "ind_bkrgvdWeZsL9Vq7xqYki64",
+    "object": "v3.reference.industry",
+    "name": "Multi-line insurance",
+    "symbol_count": 867
+  },
+  {
+    "id": "ind_adqIh-jt0DS6bCNpp71bAH",
+    "object": "v3.reference.industry",
+    "name": "Office equipment/Supplies",
+    "symbol_count": 120
+  },
+  {
+    "id": "ind_caZ993uENgrsp0Lqph4s7u",
+    "object": "v3.reference.industry",
+    "name": "Oil & gas pipelines",
+    "symbol_count": 306
+  },
+  {
+    "id": "ind_v8zm8Fmad5hPsSEnv9yrxw",
+    "object": "v3.reference.industry",
+    "name": "Oil & gas production",
+    "symbol_count": 848
+  },
+  {
+    "id": "ind_UFxrP5peZfTgl2qF3ohSOX",
+    "object": "v3.reference.industry",
+    "name": "Oil refining/Marketing",
+    "symbol_count": 333
+  },
+  {
+    "id": "ind_0XkrOr0XhohThetgn19AIl",
+    "object": "v3.reference.industry",
+    "name": "Oilfield services/Equipment",
+    "symbol_count": 347
+  },
+  {
+    "id": "ind_-3ccBMkIiupPME2xRwW-OP",
+    "object": "v3.reference.industry",
+    "name": "Other consumer services",
+    "symbol_count": 704
+  },
+  {
+    "id": "ind_z0EUI6EkXOFVV-Dp_wsK3i",
+    "object": "v3.reference.industry",
+    "name": "Other consumer specialties",
+    "symbol_count": 304
+  },
+  {
+    "id": "ind_QAEcZEDsneoabjQyfWNk3b",
+    "object": "v3.reference.industry",
+    "name": "Other metals/Minerals",
+    "symbol_count": 3238
+  },
+  {
+    "id": "ind_Ks4Itz24KFb9-Jjjx8acM7",
+    "object": "v3.reference.industry",
+    "name": "Other transportation",
+    "symbol_count": 732
+  },
+  {
+    "id": "ind_scoG4bWTqPdMuDE0Lvi6h5",
+    "object": "v3.reference.industry",
+    "name": "Packaged software",
+    "symbol_count": 4776
+  },
+  {
+    "id": "ind_vx7Jyr8gS7AsfXmMuSVDX5",
+    "object": "v3.reference.industry",
+    "name": "Personnel services",
+    "symbol_count": 267
+  },
+  {
+    "id": "ind_j7NMvKyxcFDPNpmx4j_OlZ",
+    "object": "v3.reference.industry",
+    "name": "Pharmaceuticals: generic",
+    "symbol_count": 66
+  },
+  {
+    "id": "ind_uASHbd3mDNXRzc3SKYsueI",
+    "object": "v3.reference.industry",
+    "name": "Pharmaceuticals: major",
+    "symbol_count": 3123
+  },
+  {
+    "id": "ind_Hvb5riCb-oa6RZmQxF4WNS",
+    "object": "v3.reference.industry",
+    "name": "Pharmaceuticals: other",
+    "symbol_count": 487
+  },
+  {
+    "id": "ind_GMpJHl3MPWXFB91KlpXCc1",
+    "object": "v3.reference.industry",
+    "name": "Precious metals",
+    "symbol_count": 3579
+  },
+  {
+    "id": "ind_cTXq8YULL_crH-zulREJAx",
+    "object": "v3.reference.industry",
+    "name": "Property/Casualty insurance",
+    "symbol_count": 477
+  },
+  {
+    "id": "ind_yzGo7P-2pn9ppgVGKDdHy-",
+    "object": "v3.reference.industry",
+    "name": "Publishing: books/magazines",
+    "symbol_count": 200
+  },
+  {
+    "id": "ind_Cr93AVRyTAAl96L0IP86aH",
+    "object": "v3.reference.industry",
+    "name": "Publishing: newspapers",
+    "symbol_count": 139
+  },
+  {
+    "id": "ind_zQP6BMOi2k5P6qp84Xep6Y",
+    "object": "v3.reference.industry",
+    "name": "Pulp & paper",
+    "symbol_count": 332
+  },
+  {
+    "id": "ind_ZkCvkl-Etv4IhYY5mwDaqT",
+    "object": "v3.reference.industry",
+    "name": "Railroads",
+    "symbol_count": 182
+  },
+  {
+    "id": "ind_843s-Gf5tYBY-sflJOwQdd",
+    "object": "v3.reference.industry",
+    "name": "Real estate development",
+    "symbol_count": 3028
+  },
+  {
+    "id": "ind_I26VmEujAhmQI7wbQCQ6aB",
+    "object": "v3.reference.industry",
+    "name": "Real estate investment trusts",
+    "symbol_count": 2267
+  },
+  {
+    "id": "ind_dZoeK-bU6nBEl5cqMzSD6X",
+    "object": "v3.reference.industry",
+    "name": "Recreational products",
+    "symbol_count": 382
+  },
+  {
+    "id": "ind_UeLKG0u8O1uYSq2gS79_vh",
+    "object": "v3.reference.industry",
+    "name": "Regional banks",
+    "symbol_count": 1591
+  },
+  {
+    "id": "ind_erLiuQpJuDjdtAO6XIQtOD",
+    "object": "v3.reference.industry",
+    "name": "Restaurants",
+    "symbol_count": 778
+  },
+  {
+    "id": "ind_g80wWGXTBxg5i0UP8SawJf",
+    "object": "v3.reference.industry",
+    "name": "Savings banks",
+    "symbol_count": 160
+  },
+  {
+    "id": "ind_f_h0j91WC-nsjQGOc0a6E1",
+    "object": "v3.reference.industry",
+    "name": "Semiconductors",
+    "symbol_count": 1945
+  },
+  {
+    "id": "ind_bTBdMjAxgTKrORCd8YR6t1",
+    "object": "v3.reference.industry",
+    "name": "Services to the health industry",
+    "symbol_count": 52
+  },
+  {
+    "id": "ind_JAgzNXtxuzsXC1B3Kp63EN",
+    "object": "v3.reference.industry",
+    "name": "Specialty insurance",
+    "symbol_count": 95
+  },
+  {
+    "id": "ind_uV7F5raX_CN0mGUqdStkeL",
+    "object": "v3.reference.industry",
+    "name": "Specialty stores",
+    "symbol_count": 1215
+  },
+  {
+    "id": "ind_jQVe8QUjWZdjLfx693Jnz-",
+    "object": "v3.reference.industry",
+    "name": "Specialty telecommunications",
+    "symbol_count": 369
+  },
+  {
+    "id": "ind_aEqq1mmo1_wdIHEDOp1PhZ",
+    "object": "v3.reference.industry",
+    "name": "Steel",
+    "symbol_count": 1178
+  },
+  {
+    "id": "ind_iiyRwJtLkdW9g7VTS2hHeb",
+    "object": "v3.reference.industry",
+    "name": "Telecommunications equipment",
+    "symbol_count": 817
+  },
+  {
+    "id": "ind_XHq0sTcopPD9B3O2j6nPOb",
+    "object": "v3.reference.industry",
+    "name": "Textiles",
+    "symbol_count": 979
+  },
+  {
+    "id": "ind_KdIqEf7MluMDppbfmBwA-Y",
+    "object": "v3.reference.industry",
+    "name": "Tobacco",
+    "symbol_count": 154
+  },
+  {
+    "id": "ind_WPv93qlJOXtBcvwzUM9yk2",
+    "object": "v3.reference.industry",
+    "name": "Tools & hardware",
+    "symbol_count": 190
+  },
+  {
+    "id": "ind_24Iai7yKKSK5COgHpwQZKt",
+    "object": "v3.reference.industry",
+    "name": "Trucking",
+    "symbol_count": 238
+  },
+  {
+    "id": "ind_ly-KxJw6e8mmb2jZOeRcwK",
+    "object": "v3.reference.industry",
+    "name": "Trucks/Construction/Farm machinery",
+    "symbol_count": 993
+  },
+  {
+    "id": "ind_LDjAsh-EmYJHbIqmFwFNiX",
+    "object": "v3.reference.industry",
+    "name": "Water utilities",
+    "symbol_count": 214
+  },
+  {
+    "id": "ind_5RK2MsMIpH_dgJ0cpeQU6h",
+    "object": "v3.reference.industry",
+    "name": "Wholesale distributors",
+    "symbol_count": 1705
+  },
+  {
+    "id": "ind_4uqA21-oZcdedDhh7naY-B",
+    "object": "v3.reference.industry",
+    "name": "Wireless telecommunications",
+    "symbol_count": 410
+  }
+]

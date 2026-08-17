@@ -1,0 +1,835 @@
+[
+  {
+    "id": "cty_w_ktCqG4RGTtslsN-k22LG",
+    "object": "v3.reference.country",
+    "name": "Aland Islands",
+    "code": "AX",
+    "symbol_count": 6
+  },
+  {
+    "id": "cty_LcA4GJ0tiGk0FHYJav-7cl",
+    "object": "v3.reference.country",
+    "name": "Anguilla",
+    "code": "AI",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_iNFQbLgAbcQr88b6AHSO-5",
+    "object": "v3.reference.country",
+    "name": "Argentina",
+    "code": "AR",
+    "symbol_count": 192
+  },
+  {
+    "id": "cty_HSNhJG5kDdmBNxgPbFFud3",
+    "object": "v3.reference.country",
+    "name": "Australia",
+    "code": "AU",
+    "symbol_count": 2712
+  },
+  {
+    "id": "cty_6gC6UHBUVVaKCl9UdpMhW_",
+    "object": "v3.reference.country",
+    "name": "Austria",
+    "code": "AT",
+    "symbol_count": 416
+  },
+  {
+    "id": "cty_tfBc7wXzjU1r1qt7ni_R_q",
+    "object": "v3.reference.country",
+    "name": "Azerbaijan",
+    "code": "AZ",
+    "symbol_count": 3
+  },
+  {
+    "id": "cty_S15HW47tzVtZVwtxSzDI46",
+    "object": "v3.reference.country",
+    "name": "Bahamas",
+    "code": "BS",
+    "symbol_count": 11
+  },
+  {
+    "id": "cty_FSge-X9XQhXFsjEWS9cyyC",
+    "object": "v3.reference.country",
+    "name": "Bahrain",
+    "code": "BH",
+    "symbol_count": 31
+  },
+  {
+    "id": "cty_T7NBPw6S9fWXAEEK89SzNE",
+    "object": "v3.reference.country",
+    "name": "Bangladesh",
+    "code": "BD",
+    "symbol_count": 382
+  },
+  {
+    "id": "cty_pZqHDDg5f3oO6ySD8YOZ53",
+    "object": "v3.reference.country",
+    "name": "Barbados",
+    "code": "BB",
+    "symbol_count": 3
+  },
+  {
+    "id": "cty_F9HNXqnVsldWG4hBOM2ZhN",
+    "object": "v3.reference.country",
+    "name": "Belgium",
+    "code": "BE",
+    "symbol_count": 435
+  },
+  {
+    "id": "cty_NBUd7IDzbceRYwbUZdvhq4",
+    "object": "v3.reference.country",
+    "name": "Bermuda",
+    "code": "BM",
+    "symbol_count": 265
+  },
+  {
+    "id": "cty_TpTF1skqcECAgqEgWQbxv9",
+    "object": "v3.reference.country",
+    "name": "Botswana",
+    "code": "BW",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_zoZJxGO12g21c6MjlSLtt9",
+    "object": "v3.reference.country",
+    "name": "Brazil",
+    "code": "BR",
+    "symbol_count": 1180
+  },
+  {
+    "id": "cty_a2dlvC0eMGwPjY1YwCBOvY",
+    "object": "v3.reference.country",
+    "name": "British Virgin Islands",
+    "code": "VG",
+    "symbol_count": 30
+  },
+  {
+    "id": "cty__HvekdgWc4tyvhp59Q_Elk",
+    "object": "v3.reference.country",
+    "name": "Bulgaria",
+    "code": "BG",
+    "symbol_count": 207
+  },
+  {
+    "id": "cty_0kzxY8-DMcNcNOv9nYfRdn",
+    "object": "v3.reference.country",
+    "name": "Cambodia",
+    "code": "KH",
+    "symbol_count": 4
+  },
+  {
+    "id": "cty_ROcArdxFtZKAFcQPWkpLVh",
+    "object": "v3.reference.country",
+    "name": "Canada",
+    "code": "CA",
+    "symbol_count": 9220
+  },
+  {
+    "id": "cty_mt7kaD0o2X_VbL_E1fjepi",
+    "object": "v3.reference.country",
+    "name": "Cayman Islands",
+    "code": "KY",
+    "symbol_count": 89
+  },
+  {
+    "id": "cty_Tc3vEGi6nPnfKUA0BtKEAU",
+    "object": "v3.reference.country",
+    "name": "Chile",
+    "code": "CL",
+    "symbol_count": 252
+  },
+  {
+    "id": "cty_f55faiBe0SXXfoZjZU5_z1",
+    "object": "v3.reference.country",
+    "name": "China",
+    "code": "CN",
+    "symbol_count": 8000
+  },
+  {
+    "id": "cty_8ZfqP7HltGi-03HmazCNKh",
+    "object": "v3.reference.country",
+    "name": "Colombia",
+    "code": "CO",
+    "symbol_count": 94
+  },
+  {
+    "id": "cty_YZbRbyzpIF6efR-L55Y4sB",
+    "object": "v3.reference.country",
+    "name": "Costa Rica",
+    "code": "CR",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_VtoCrBvlXv7ljdKkgJYw73",
+    "object": "v3.reference.country",
+    "name": "Croatia",
+    "code": "HR",
+    "symbol_count": 66
+  },
+  {
+    "id": "cty_xbGdswKOlU9HKGPUbqTTHu",
+    "object": "v3.reference.country",
+    "name": "Cyprus",
+    "code": "CY",
+    "symbol_count": 93
+  },
+  {
+    "id": "cty_WGLJxf0F4-gC0FnfStXUsa",
+    "object": "v3.reference.country",
+    "name": "Czech Republic",
+    "code": "CZ",
+    "symbol_count": 48
+  },
+  {
+    "id": "cty_XUXvCWFWVOzif1mNlI9ByE",
+    "object": "v3.reference.country",
+    "name": "Denmark",
+    "code": "DK",
+    "symbol_count": 576
+  },
+  {
+    "id": "cty_HfJPJp8t_b5JtTf6FSWx_6",
+    "object": "v3.reference.country",
+    "name": "Dominican Republic",
+    "code": "DO",
+    "symbol_count": 6
+  },
+  {
+    "id": "cty_x1SxGtVFpogLAxRp_yzM7o",
+    "object": "v3.reference.country",
+    "name": "Egypt",
+    "code": "EG",
+    "symbol_count": 275
+  },
+  {
+    "id": "cty_O6yvb4INyQXgzL22Sw5q4-",
+    "object": "v3.reference.country",
+    "name": "El Salvador",
+    "code": "SV",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_Nv-g97ZLRePo_jgXH9VN1k",
+    "object": "v3.reference.country",
+    "name": "Estonia",
+    "code": "EE",
+    "symbol_count": 43
+  },
+  {
+    "id": "cty_Vk8SS-f3jb35HJ-zFme1eU",
+    "object": "v3.reference.country",
+    "name": "Faroe Islands",
+    "code": "FO",
+    "symbol_count": 10
+  },
+  {
+    "id": "cty_POkHQ8vDzLHeH-yPFl1Thz",
+    "object": "v3.reference.country",
+    "name": "Finland",
+    "code": "FI",
+    "symbol_count": 637
+  },
+  {
+    "id": "cty_ZY4WU3eydQzCYnekob0123",
+    "object": "v3.reference.country",
+    "name": "France",
+    "code": "FR",
+    "symbol_count": 2124
+  },
+  {
+    "id": "cty_ZskhXlF7xdPH5Th2JHuI6f",
+    "object": "v3.reference.country",
+    "name": "Gabon",
+    "code": "GA",
+    "symbol_count": 3
+  },
+  {
+    "id": "cty_z3DCr-eKUjWILE9WTyhumF",
+    "object": "v3.reference.country",
+    "name": "Germany",
+    "code": "DE",
+    "symbol_count": 4693
+  },
+  {
+    "id": "cty_gsijHpOX2RnpNoxhTDAGX5",
+    "object": "v3.reference.country",
+    "name": "Ghana",
+    "code": "GH",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_y0Sn8-2acACFx7R2g6sEj6",
+    "object": "v3.reference.country",
+    "name": "Gibraltar",
+    "code": "GI",
+    "symbol_count": 8
+  },
+  {
+    "id": "cty_Pfx1Fxw2k3w4tioho2gPZ1",
+    "object": "v3.reference.country",
+    "name": "Greece",
+    "code": "GR",
+    "symbol_count": 330
+  },
+  {
+    "id": "cty_IY5YpJeWjCg3jxnnIB_ipI",
+    "object": "v3.reference.country",
+    "name": "Greenland",
+    "code": "GL",
+    "symbol_count": 2
+  },
+  {
+    "id": "cty_wSXHmqTg4vPEUHy4cojT0d",
+    "object": "v3.reference.country",
+    "name": "Guam",
+    "code": "GU",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_J39fYOHwh1ecdGi-feEZ4p",
+    "object": "v3.reference.country",
+    "name": "Hong Kong",
+    "code": "HK",
+    "symbol_count": 2163
+  },
+  {
+    "id": "cty_c7Ee-NRCbcI0QxS48IJvmv",
+    "object": "v3.reference.country",
+    "name": "Hungary",
+    "code": "HU",
+    "symbol_count": 80
+  },
+  {
+    "id": "cty_exxKvsQ8w2DCde_0XnAurL",
+    "object": "v3.reference.country",
+    "name": "Iceland",
+    "code": "IS",
+    "symbol_count": 36
+  },
+  {
+    "id": "cty_MWSJzujycBmE-YJChCIU0J",
+    "object": "v3.reference.country",
+    "name": "India",
+    "code": "IN",
+    "symbol_count": 7797
+  },
+  {
+    "id": "cty_mTlW_AuzYhA-URu0pMzR6A",
+    "object": "v3.reference.country",
+    "name": "Indonesia",
+    "code": "ID",
+    "symbol_count": 1006
+  },
+  {
+    "id": "cty_tFuKmwednVLnGDGSkWPTPM",
+    "object": "v3.reference.country",
+    "name": "Ireland",
+    "code": "IE",
+    "symbol_count": 380
+  },
+  {
+    "id": "cty_08zaOcZUoGXIIhjexRTXoA",
+    "object": "v3.reference.country",
+    "name": "Israel",
+    "code": "IL",
+    "symbol_count": 803
+  },
+  {
+    "id": "cty_NU_9HhoCpzc3b9PB1uSB2F",
+    "object": "v3.reference.country",
+    "name": "Italy",
+    "code": "IT",
+    "symbol_count": 1033
+  },
+  {
+    "id": "cty_qO2G5JBbHCfFtkOR2e-Iu2",
+    "object": "v3.reference.country",
+    "name": "Ivory Coast",
+    "code": "CI",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_dkJPck76jZxgqieK3cH8Y0",
+    "object": "v3.reference.country",
+    "name": "Jamaica",
+    "code": "JM",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_5fkZ9J_GEhdhlPNMd9J1d6",
+    "object": "v3.reference.country",
+    "name": "Japan",
+    "code": "JP",
+    "symbol_count": 7556
+  },
+  {
+    "id": "cty_uEVSB4otL7QI9esHASzSES",
+    "object": "v3.reference.country",
+    "name": "Jordan",
+    "code": "JO",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_taIrnVctPZihuLqjLedTTb",
+    "object": "v3.reference.country",
+    "name": "Kazakhstan",
+    "code": "KZ",
+    "symbol_count": 3
+  },
+  {
+    "id": "cty_UJKvuQRFSzShwwSeBDEbe1",
+    "object": "v3.reference.country",
+    "name": "Kenya",
+    "code": "KE",
+    "symbol_count": 62
+  },
+  {
+    "id": "cty_7Oi9y8NMFwo79lXGwh52XI",
+    "object": "v3.reference.country",
+    "name": "Kuwait",
+    "code": "KW",
+    "symbol_count": 138
+  },
+  {
+    "id": "cty_0di334Su1_qQJu2rC7bSp1",
+    "object": "v3.reference.country",
+    "name": "La Reunion",
+    "code": "RE",
+    "symbol_count": 3
+  },
+  {
+    "id": "cty_jec4JJPz5OKwWGlaL9xYz6",
+    "object": "v3.reference.country",
+    "name": "Latvia",
+    "code": "LV",
+    "symbol_count": 11
+  },
+  {
+    "id": "cty_tlK7I6wOz2IH4aGDdR7C2m",
+    "object": "v3.reference.country",
+    "name": "Liberia",
+    "code": "LR",
+    "symbol_count": 2
+  },
+  {
+    "id": "cty_SlD_klZi_NtQuZhd1I9knX",
+    "object": "v3.reference.country",
+    "name": "Liechtenstein",
+    "code": "LI",
+    "symbol_count": 7
+  },
+  {
+    "id": "cty_jBk3tfVrFQCYgxFGUcmdsC",
+    "object": "v3.reference.country",
+    "name": "Lithuania",
+    "code": "LT",
+    "symbol_count": 40
+  },
+  {
+    "id": "cty_k5xmdwJCWhLrboPjyXuOg9",
+    "object": "v3.reference.country",
+    "name": "Luxembourg",
+    "code": "LU",
+    "symbol_count": 359
+  },
+  {
+    "id": "cty_HCEkMW196A0B77yypfyvEH",
+    "object": "v3.reference.country",
+    "name": "Macau",
+    "code": "MO",
+    "symbol_count": 22
+  },
+  {
+    "id": "cty_54fBqZ7_4NPYypNUf2odFd",
+    "object": "v3.reference.country",
+    "name": "Macedonia",
+    "code": "MK",
+    "symbol_count": 3
+  },
+  {
+    "id": "cty_M4pB8BCAAi1FdTRmazYn0i",
+    "object": "v3.reference.country",
+    "name": "Malaysia",
+    "code": "MY",
+    "symbol_count": 1229
+  },
+  {
+    "id": "cty_NcyPFCNIZKkP4O52gk1qdS",
+    "object": "v3.reference.country",
+    "name": "Malta",
+    "code": "MT",
+    "symbol_count": 28
+  },
+  {
+    "id": "cty_AnpNvP46Z0CmwobC_2RtSV",
+    "object": "v3.reference.country",
+    "name": "Mauritius",
+    "code": "MU",
+    "symbol_count": 13
+  },
+  {
+    "id": "cty_W7_h6pYlwWwX13MApYEanE",
+    "object": "v3.reference.country",
+    "name": "Mexico",
+    "code": "MX",
+    "symbol_count": 411
+  },
+  {
+    "id": "cty_jfClAaUx7eGi2YG5aXOFEu",
+    "object": "v3.reference.country",
+    "name": "Monaco",
+    "code": "MC",
+    "symbol_count": 34
+  },
+  {
+    "id": "cty_q2DrCaxlnzw62vi3OEWQTI",
+    "object": "v3.reference.country",
+    "name": "Mongolia",
+    "code": "MN",
+    "symbol_count": 12
+  },
+  {
+    "id": "cty_5uGPNvEJ_xdRMYjpmm0Tt7",
+    "object": "v3.reference.country",
+    "name": "Montenegro",
+    "code": "ME",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_pvmu-NZXfamuedOcGYktsv",
+    "object": "v3.reference.country",
+    "name": "Morocco",
+    "code": "MA",
+    "symbol_count": 83
+  },
+  {
+    "id": "cty_8CR4bkiTgj2xqpptG2MI_Q",
+    "object": "v3.reference.country",
+    "name": "Mozambique",
+    "code": "MZ",
+    "symbol_count": 2
+  },
+  {
+    "id": "cty_CDukTTL1EkybYkfwlqUABB",
+    "object": "v3.reference.country",
+    "name": "Netherlands",
+    "code": "NL",
+    "symbol_count": 825
+  },
+  {
+    "id": "cty_wuMTWlrFRJtFlFfRw2y6MY",
+    "object": "v3.reference.country",
+    "name": "New Zealand",
+    "code": "NZ",
+    "symbol_count": 217
+  },
+  {
+    "id": "cty_99_lNFt2caAUTtncxEgL4q",
+    "object": "v3.reference.country",
+    "name": "Nigeria",
+    "code": "NG",
+    "symbol_count": 152
+  },
+  {
+    "id": "cty_6mJnHHe8v__s0AF7OMhW7x",
+    "object": "v3.reference.country",
+    "name": "Norway",
+    "code": "NO",
+    "symbol_count": 781
+  },
+  {
+    "id": "cty_Q4SQC868y-ntUTrQX5JQlu",
+    "object": "v3.reference.country",
+    "name": "Oman",
+    "code": "OM",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_noAnuOOFT5fBwJ63Jh5xu9",
+    "object": "v3.reference.country",
+    "name": "Pakistan",
+    "code": "PK",
+    "symbol_count": 482
+  },
+  {
+    "id": "cty_pzilcsHUYfBuyBEIYDpTlC",
+    "object": "v3.reference.country",
+    "name": "Panama",
+    "code": "PA",
+    "symbol_count": 17
+  },
+  {
+    "id": "cty_VlOFU0ykdGOeppuJXP2Qd6",
+    "object": "v3.reference.country",
+    "name": "Papua New Guinea",
+    "code": "PG",
+    "symbol_count": 5
+  },
+  {
+    "id": "cty_TyoKQCDBq_D9WByZVmUEqh",
+    "object": "v3.reference.country",
+    "name": "Peru",
+    "code": "PE",
+    "symbol_count": 108
+  },
+  {
+    "id": "cty_VktKQhUkQYiHNEQeLAYb-p",
+    "object": "v3.reference.country",
+    "name": "Philippines",
+    "code": "PH",
+    "symbol_count": 319
+  },
+  {
+    "id": "cty_PVJFD9z8SqOE2fiujPTHYc",
+    "object": "v3.reference.country",
+    "name": "Poland",
+    "code": "PL",
+    "symbol_count": 897
+  },
+  {
+    "id": "cty_xEpqzhuOp6AxPxRAJppNO7",
+    "object": "v3.reference.country",
+    "name": "Portugal",
+    "code": "PT",
+    "symbol_count": 109
+  },
+  {
+    "id": "cty_SifebAkCtdSNt5JLbFqZvS",
+    "object": "v3.reference.country",
+    "name": "Puerto Rico",
+    "code": "PR",
+    "symbol_count": 34
+  },
+  {
+    "id": "cty_hrOsfhqfqwY30PKLFoHr3p",
+    "object": "v3.reference.country",
+    "name": "Qatar",
+    "code": "QA",
+    "symbol_count": 57
+  },
+  {
+    "id": "cty_bNyPj2AU1coBfh96X36nm1",
+    "object": "v3.reference.country",
+    "name": "Romania",
+    "code": "RO",
+    "symbol_count": 230
+  },
+  {
+    "id": "cty_vlV0A43EuWBENuRVqZseau",
+    "object": "v3.reference.country",
+    "name": "Russian Federation",
+    "code": "RU",
+    "symbol_count": 333
+  },
+  {
+    "id": "cty_sQzHIlpK3qAiSzADxRy9ov",
+    "object": "v3.reference.country",
+    "name": "Rwanda",
+    "code": "RW",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_PlSO-k8syj63CtNZclB6cs",
+    "object": "v3.reference.country",
+    "name": "Saudi Arabia",
+    "code": "SA",
+    "symbol_count": 396
+  },
+  {
+    "id": "cty_U7GNnkIsMegCA1NFwtFrfJ",
+    "object": "v3.reference.country",
+    "name": "Senegal",
+    "code": "SN",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_mcZfwiCWLGWLXxW1URk0no",
+    "object": "v3.reference.country",
+    "name": "Serbia",
+    "code": "RS",
+    "symbol_count": 23
+  },
+  {
+    "id": "cty_eZLtH4Fw50DTnhFMuGc2DA",
+    "object": "v3.reference.country",
+    "name": "Singapore",
+    "code": "SG",
+    "symbol_count": 971
+  },
+  {
+    "id": "cty_YXQ0QPUiXSJiE4ao28CTPA",
+    "object": "v3.reference.country",
+    "name": "Slovakia",
+    "code": "SK",
+    "symbol_count": 7
+  },
+  {
+    "id": "cty_oVhWT3OUCt4qwO_cMGHsvo",
+    "object": "v3.reference.country",
+    "name": "Slovenia",
+    "code": "SI",
+    "symbol_count": 26
+  },
+  {
+    "id": "cty_cZRre0FrckbLRoqYFrbmXD",
+    "object": "v3.reference.country",
+    "name": "South Africa",
+    "code": "ZA",
+    "symbol_count": 375
+  },
+  {
+    "id": "cty_-L1Y1V9GXynPa5rh7jhwTF",
+    "object": "v3.reference.country",
+    "name": "South Korea",
+    "code": "KR",
+    "symbol_count": 2809
+  },
+  {
+    "id": "cty_cDTsXG3A2ngYFNu2dYZXqF",
+    "object": "v3.reference.country",
+    "name": "Spain",
+    "code": "ES",
+    "symbol_count": 879
+  },
+  {
+    "id": "cty_8c3E3ptVwO324K0iykeJAU",
+    "object": "v3.reference.country",
+    "name": "Sri Lanka",
+    "code": "LK",
+    "symbol_count": 293
+  },
+  {
+    "id": "cty_HB1HQrSposXN3Gm73EeQdM",
+    "object": "v3.reference.country",
+    "name": "Sudan",
+    "code": "SD",
+    "symbol_count": 2
+  },
+  {
+    "id": "cty_quc3mqlXeOrW4A4feXg9KJ",
+    "object": "v3.reference.country",
+    "name": "Sweden",
+    "code": "SE",
+    "symbol_count": 2184
+  },
+  {
+    "id": "cty_E0fLN1ZD8c17gREGZeDYqa",
+    "object": "v3.reference.country",
+    "name": "Switzerland",
+    "code": "CH",
+    "symbol_count": 1398
+  },
+  {
+    "id": "cty_CYibRDEm0VAfBeObcxAfvd",
+    "object": "v3.reference.country",
+    "name": "Taiwan",
+    "code": "TW",
+    "symbol_count": 2454
+  },
+  {
+    "id": "cty_Yxszb0D80Xn9WMqT2KoeFe",
+    "object": "v3.reference.country",
+    "name": "Tanzania",
+    "code": "TZ",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_hhMgALLsSn6M0Tt4WD_pgB",
+    "object": "v3.reference.country",
+    "name": "Thailand",
+    "code": "TH",
+    "symbol_count": 1849
+  },
+  {
+    "id": "cty_s2HyMJ1987YLPHDexS7N2O",
+    "object": "v3.reference.country",
+    "name": "Togo",
+    "code": "TG",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_J5p6cFyuN1ZIgBw2XDmNKA",
+    "object": "v3.reference.country",
+    "name": "Tunisia",
+    "code": "TN",
+    "symbol_count": 73
+  },
+  {
+    "id": "cty_V13NjGqLeD8iYiHUGratZ2",
+    "object": "v3.reference.country",
+    "name": "Turkey",
+    "code": "TR",
+    "symbol_count": 639
+  },
+  {
+    "id": "cty_PSYtNYSo1tBfyoqrZYnqjN",
+    "object": "v3.reference.country",
+    "name": "Uganda",
+    "code": "UG",
+    "symbol_count": 1
+  },
+  {
+    "id": "cty_PsVDrJ9tMqy9MxSkk7WXWg",
+    "object": "v3.reference.country",
+    "name": "Ukraine",
+    "code": "UA",
+    "symbol_count": 7
+  },
+  {
+    "id": "cty_RjrLn-qoKDtK__wMs4o1Z9",
+    "object": "v3.reference.country",
+    "name": "United Arab Emirates",
+    "code": "AE",
+    "symbol_count": 176
+  },
+  {
+    "id": "cty_ZMRC9lLfno5NAOmNEs3UOr",
+    "object": "v3.reference.country",
+    "name": "United Kingdom",
+    "code": "GB",
+    "symbol_count": 3561
+  },
+  {
+    "id": "cty_ybeNtUvgWjwsHDz3d4387S",
+    "object": "v3.reference.country",
+    "name": "United States",
+    "code": "US",
+    "symbol_count": 24320
+  },
+  {
+    "id": "cty_FbqZ1n7eawK1D_u7_tTnJ2",
+    "object": "v3.reference.country",
+    "name": "Uruguay",
+    "code": "UY",
+    "symbol_count": 46
+  },
+  {
+    "id": "cty_02iV5wNg-9x8LUfVWiKeFE",
+    "object": "v3.reference.country",
+    "name": "Venezuela",
+    "code": "VE",
+    "symbol_count": 30
+  },
+  {
+    "id": "cty_DH49i7WHiOyQ4mCLNE0_Bc",
+    "object": "v3.reference.country",
+    "name": "Vietnam",
+    "code": "VN",
+    "symbol_count": 1031
+  },
+  {
+    "id": "cty_iEEADt7iAYg8Ng-ikr0qMB",
+    "object": "v3.reference.country",
+    "name": "Zambia",
+    "code": "ZM",
+    "symbol_count": 2
+  },
+  {
+    "id": "cty_7dZfJ9RuwsoaIBjlSLzNfm",
+    "object": "v3.reference.country",
+    "name": "Zimbabwe",
+    "code": "ZW",
+    "symbol_count": 1
+  }
+]

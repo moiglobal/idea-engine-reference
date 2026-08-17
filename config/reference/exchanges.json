@@ -1,0 +1,1508 @@
+[
+  {
+    "id": "exc_7oMm4-8I5Mlzqku4zhdzQA",
+    "object": "v3.reference.exchange",
+    "code": "ADX",
+    "exchange_name": "Abu Dhabi Securities Exchange",
+    "exchange_local_name": "Abu Dhabi Securities Exchange",
+    "mics": [
+      "XADS"
+    ],
+    "markets": [
+      "uae"
+    ],
+    "symbol_count": 92
+  },
+  {
+    "id": "exc_Wjx4PrPXTwI5oecfHZr6Ca",
+    "object": "v3.reference.exchange",
+    "code": "AMEX",
+    "exchange_name": "NYSE American",
+    "exchange_local_name": "NYSE American",
+    "mics": [
+      "XASE",
+      "ARCX",
+      "XCHI"
+    ],
+    "markets": [
+      "america"
+    ],
+    "symbol_count": 1394
+  },
+  {
+    "id": "exc_3pfRFX16brYtuacsBNizLk",
+    "object": "v3.reference.exchange",
+    "code": "AQS",
+    "exchange_name": null,
+    "exchange_local_name": null,
+    "mics": [],
+    "markets": [],
+    "symbol_count": 3
+  },
+  {
+    "id": "exc_nSZeYicJbKRJW7k7ok8AF0",
+    "object": "v3.reference.exchange",
+    "code": "AQSE",
+    "exchange_name": "Aquis Stock Exchange",
+    "exchange_local_name": "Aquis Stock Exchange",
+    "mics": [
+      "AQSG",
+      "AQST"
+    ],
+    "markets": [
+      "uk"
+    ],
+    "symbol_count": 67
+  },
+  {
+    "id": "exc_vtacXVfvG-TXngEykPYm4l",
+    "object": "v3.reference.exchange",
+    "code": "ASX",
+    "exchange_name": "Australian Securities Exchange",
+    "exchange_local_name": "Australian Securities Exchange",
+    "mics": [
+      "XASX"
+    ],
+    "markets": [
+      "australia"
+    ],
+    "symbol_count": 2496
+  },
+  {
+    "id": "exc_awCqVYQU03MFD18VR9zZ6B",
+    "object": "v3.reference.exchange",
+    "code": "ATHEX",
+    "exchange_name": "Athens Stock Exchange",
+    "exchange_local_name": "Athens Exchange",
+    "mics": [
+      "XATH",
+      "ENAX"
+    ],
+    "markets": [
+      "greece"
+    ],
+    "symbol_count": 164
+  },
+  {
+    "id": "exc_BMB5QpmEE1f2JlmIc_SyIE",
+    "object": "v3.reference.exchange",
+    "code": "B3",
+    "exchange_name": "B3",
+    "exchange_local_name": "B3 - Brasil Bolsa Balcao",
+    "mics": [
+      "BVMF"
+    ],
+    "markets": [
+      "brazil"
+    ],
+    "symbol_count": 2285
+  },
+  {
+    "id": "exc_BgeqC3yWmT4_4hDUPexCjp",
+    "object": "v3.reference.exchange",
+    "code": "BCS",
+    "exchange_name": "Santiago Stock Exchange",
+    "exchange_local_name": "Santiago Stock Exchange",
+    "mics": [
+      "XSGO"
+    ],
+    "markets": [
+      "chile"
+    ],
+    "symbol_count": 487
+  },
+  {
+    "id": "exc_Be3dACUwhwIkYYq1WCyIog",
+    "object": "v3.reference.exchange",
+    "code": "BELEX",
+    "exchange_name": "Belgrade Stock Exchange",
+    "exchange_local_name": "Belgrade Stock Exchange",
+    "mics": [
+      "XBEL"
+    ],
+    "markets": [
+      "serbia"
+    ],
+    "symbol_count": 27
+  },
+  {
+    "id": "exc_TiRNmp04TgXcPZL6Uc3gmn",
+    "object": "v3.reference.exchange",
+    "code": "BER",
+    "exchange_name": "Berlin Stock Exchange",
+    "exchange_local_name": "Boerse Berlin",
+    "mics": [],
+    "markets": [],
+    "symbol_count": 16
+  },
+  {
+    "id": "exc_HVLpRvyd1QV31aOweG2sOH",
+    "object": "v3.reference.exchange",
+    "code": "BHB",
+    "exchange_name": "Bahrain Stock Exchange",
+    "exchange_local_name": "Bahrain Bourse",
+    "mics": [
+      "XBAH"
+    ],
+    "markets": [
+      "bahrain"
+    ],
+    "symbol_count": 27
+  },
+  {
+    "id": "exc_JEorKKpE7rmwa3VFxef0zS",
+    "object": "v3.reference.exchange",
+    "code": "BIST",
+    "exchange_name": "Istanbul Exchange",
+    "exchange_local_name": "Borsa Istanbul",
+    "mics": [
+      "XEQY"
+    ],
+    "markets": [
+      "turkey"
+    ],
+    "symbol_count": 628
+  },
+  {
+    "id": "exc_p9GPZXweved_s64ZVrJzci",
+    "object": "v3.reference.exchange",
+    "code": "BIVA",
+    "exchange_name": "Institutional Stock Exchange",
+    "exchange_local_name": "Bolsa Institucional de Valores",
+    "mics": [
+      "BIVA"
+    ],
+    "markets": [
+      "mexico"
+    ],
+    "symbol_count": 796
+  },
+  {
+    "id": "exc_FYGtOjF6TMmakhQgBca98I",
+    "object": "v3.reference.exchange",
+    "code": "BME",
+    "exchange_name": "Spanish Stock Exchange",
+    "exchange_local_name": "Bolsa de Madrid (BME)",
+    "mics": [
+      "XMAD",
+      "GROW",
+      "SCLE",
+      "MABX",
+      "XLAT"
+    ],
+    "markets": [
+      "spain"
+    ],
+    "symbol_count": 350
+  },
+  {
+    "id": "exc_3WQRD2rd7TcjaYEX_g685w",
+    "object": "v3.reference.exchange",
+    "code": "BMV",
+    "exchange_name": "Mexican Stock Exchange",
+    "exchange_local_name": "Bolsa Mexicana de Valores",
+    "mics": [
+      "XMEX"
+    ],
+    "markets": [
+      "mexico"
+    ],
+    "symbol_count": 1496
+  },
+  {
+    "id": "exc__eMjglCvJs41hDgD1uWwnq",
+    "object": "v3.reference.exchange",
+    "code": "BSE",
+    "exchange_name": "Bombay Stock Exchange",
+    "exchange_local_name": "BSE (Bombay Stock Exchange)",
+    "mics": [
+      "XBOM"
+    ],
+    "markets": [
+      "india"
+    ],
+    "symbol_count": 5259
+  },
+  {
+    "id": "exc_4r_fPXO9_8WXXoiEqROrmc",
+    "object": "v3.reference.exchange",
+    "code": "BSEBG",
+    "exchange_name": "Bulgarian Stock Exchange",
+    "exchange_local_name": "Bulgarian Stock Exchange (Sofia)",
+    "mics": [
+      "XBUL"
+    ],
+    "markets": [
+      "bulgaria"
+    ],
+    "symbol_count": 425
+  },
+  {
+    "id": "exc_Y1TqeNRUJjU_r8SDbxu_wT",
+    "object": "v3.reference.exchange",
+    "code": "BSSE",
+    "exchange_name": "Bratislava Stock Exchange",
+    "exchange_local_name": "Bratislava Stock Exchange",
+    "mics": [
+      "XBRA",
+      "EBRA"
+    ],
+    "markets": [
+      "slovakia"
+    ],
+    "symbol_count": 7
+  },
+  {
+    "id": "exc_BlWmzqNEJYwPRZ3872D9RM",
+    "object": "v3.reference.exchange",
+    "code": "BUD",
+    "exchange_name": "Budapest Stock Exchange",
+    "exchange_local_name": "Budapest Stock Exchange",
+    "mics": [
+      "XBUD",
+      "XTND"
+    ],
+    "markets": [
+      "hungary"
+    ],
+    "symbol_count": 87
+  },
+  {
+    "id": "exc_-n7xl1b-rRppvO0ZR_AdXw",
+    "object": "v3.reference.exchange",
+    "code": "BVB",
+    "exchange_name": "Bucharest Stock Exchange",
+    "exchange_local_name": "Bucharest Stock Exchange",
+    "mics": [
+      "XCAN",
+      "XBSE"
+    ],
+    "markets": [
+      "romania"
+    ],
+    "symbol_count": 277
+  },
+  {
+    "id": "exc_nzyegP7yhBl8J4k2jRUOsc",
+    "object": "v3.reference.exchange",
+    "code": "BVC",
+    "exchange_name": "Colombia Securities Exchange",
+    "exchange_local_name": "Bolsa de Valores de Colombia",
+    "mics": [
+      "XBOG"
+    ],
+    "markets": [
+      "colombia"
+    ],
+    "symbol_count": 133
+  },
+  {
+    "id": "exc_Gxl__bVsHsKZjt9DZw43aI",
+    "object": "v3.reference.exchange",
+    "code": "BVCA",
+    "exchange_name": "Caracas Stock Exchange",
+    "exchange_local_name": "Bolsa de Valores de Caracas",
+    "mics": [
+      "BVCA"
+    ],
+    "markets": [
+      "venezuela"
+    ],
+    "symbol_count": 34
+  },
+  {
+    "id": "exc_sOsrt8sn-H5sSyRXcb3pKV",
+    "object": "v3.reference.exchange",
+    "code": "BVL",
+    "exchange_name": "Lima Stock Exchange",
+    "exchange_local_name": "Bolsa de Valores de Lima",
+    "mics": [
+      "XLIM"
+    ],
+    "markets": [
+      "peru"
+    ],
+    "symbol_count": 212
+  },
+  {
+    "id": "exc_7cUckA8UU4jT-M9ETsC1v_",
+    "object": "v3.reference.exchange",
+    "code": "BVMT",
+    "exchange_name": "Tunis Stock Exchange",
+    "exchange_local_name": "Bourse de Tunis",
+    "mics": [
+      "XTUN"
+    ],
+    "markets": [
+      "tunisia"
+    ],
+    "symbol_count": 72
+  },
+  {
+    "id": "exc_CMipIDhRThlp8sOpnTzzAW",
+    "object": "v3.reference.exchange",
+    "code": "BX",
+    "exchange_name": "BX Swiss",
+    "exchange_local_name": "BX Swiss",
+    "mics": [
+      "XBRN"
+    ],
+    "markets": [
+      "switzerland"
+    ],
+    "symbol_count": 978
+  },
+  {
+    "id": "exc_CvklXzojo39EoTKtasKlGc",
+    "object": "v3.reference.exchange",
+    "code": "BYMA",
+    "exchange_name": "Buenos Aires Stock Exchange",
+    "exchange_local_name": "Bolsas y Mercados Argentinos (BYMA)",
+    "mics": [
+      "XMEV",
+      "XBUE"
+    ],
+    "markets": [
+      "argentina"
+    ],
+    "symbol_count": 1461
+  },
+  {
+    "id": "exc_Aq4faRoQwn307KH4zQOac5",
+    "object": "v3.reference.exchange",
+    "code": "CBOE",
+    "exchange_name": "Cboe US",
+    "exchange_local_name": "Cboe BZX (US listings)",
+    "mics": [
+      "BATS"
+    ],
+    "markets": [
+      "america"
+    ],
+    "symbol_count": 310
+  },
+  {
+    "id": "exc_IdsOVfaXc_LRVIYb7KH-il",
+    "object": "v3.reference.exchange",
+    "code": "CPH",
+    "exchange_name": "Nasdaq Copenhagen",
+    "exchange_local_name": "Nasdaq Copenhagen",
+    "mics": [
+      "XCSE",
+      "DSME"
+    ],
+    "markets": [
+      "denmark"
+    ],
+    "symbol_count": 358
+  },
+  {
+    "id": "exc_XDVAFeyWOWHWC36fRHs2La",
+    "object": "v3.reference.exchange",
+    "code": "CSE",
+    "exchange_name": "Canadian Securities Exchange",
+    "exchange_local_name": "Canadian Securities Exchange",
+    "mics": [
+      "XCNQ"
+    ],
+    "markets": [
+      "canada"
+    ],
+    "symbol_count": 1052
+  },
+  {
+    "id": "exc_BHUH-WuQPVX7T5zklT2SVR",
+    "object": "v3.reference.exchange",
+    "code": "CSECY",
+    "exchange_name": "Cyprus Stock Exchange",
+    "exchange_local_name": "Cyprus Stock Exchange",
+    "mics": [
+      "XCYS",
+      "XECM"
+    ],
+    "markets": [
+      "cyprus"
+    ],
+    "symbol_count": 39
+  },
+  {
+    "id": "exc_g67O9tPVvw3H61bjfDBFpj",
+    "object": "v3.reference.exchange",
+    "code": "CSELK",
+    "exchange_name": "Colombo Stock Exchange",
+    "exchange_local_name": "Colombo Stock Exchange",
+    "mics": [
+      "XCOL"
+    ],
+    "markets": [
+      "srilanka"
+    ],
+    "symbol_count": 296
+  },
+  {
+    "id": "exc_TvfqxomioFkhtVV2XU91mz",
+    "object": "v3.reference.exchange",
+    "code": "CSEMA",
+    "exchange_name": "Casablanca Stock Exchange",
+    "exchange_local_name": "Casablanca Stock Exchange",
+    "mics": [
+      "XCAS"
+    ],
+    "markets": [
+      "morocco"
+    ],
+    "symbol_count": 78
+  },
+  {
+    "id": "exc_fmXz0jBs-EciGdZ00i8-vy",
+    "object": "v3.reference.exchange",
+    "code": "DFM",
+    "exchange_name": "Dubai Financial Market",
+    "exchange_local_name": "Dubai Financial Market",
+    "mics": [
+      "XDFM"
+    ],
+    "markets": [
+      "uae"
+    ],
+    "symbol_count": 65
+  },
+  {
+    "id": "exc_U83ctixvg7z_8PpEzB885c",
+    "object": "v3.reference.exchange",
+    "code": "DSE",
+    "exchange_name": "Dhaka Stock Exchange",
+    "exchange_local_name": "Dhaka Stock Exchange",
+    "mics": [
+      "XDHA"
+    ],
+    "markets": [
+      "bangladesh"
+    ],
+    "symbol_count": 380
+  },
+  {
+    "id": "exc_1A2sy42sHPnbWsZdzrv9sX",
+    "object": "v3.reference.exchange",
+    "code": "DUS",
+    "exchange_name": "Dusseldorf Stock Exchange",
+    "exchange_local_name": "Boerse Duesseldorf",
+    "mics": [
+      "XDUS"
+    ],
+    "markets": [
+      "germany"
+    ],
+    "symbol_count": 2858
+  },
+  {
+    "id": "exc_n44-iBiC_gODznJY6i0uyA",
+    "object": "v3.reference.exchange",
+    "code": "EGX",
+    "exchange_name": "Egyptian Exchange",
+    "exchange_local_name": "Egyptian Exchange",
+    "mics": [
+      "XCAI",
+      "NILX"
+    ],
+    "markets": [
+      "egypt"
+    ],
+    "symbol_count": 296
+  },
+  {
+    "id": "exc_-TjcC3PqQNVvJv9eXoiYdN",
+    "object": "v3.reference.exchange",
+    "code": "EURONEXT",
+    "exchange_name": "Euronext",
+    "exchange_local_name": "Euronext Paris",
+    "mics": [
+      "XPAR",
+      "ALXP",
+      "XAMS",
+      "XBRU",
+      "XMLI",
+      "XLIS",
+      "XMSM",
+      "XESM",
+      "ALXB",
+      "ENXL",
+      "MLXB",
+      "XPMC",
+      "VPXB"
+    ],
+    "markets": [
+      "france",
+      "netherlands",
+      "belgium",
+      "portugal",
+      "ireland"
+    ],
+    "symbol_count": 1581
+  },
+  {
+    "id": "exc_Ja_b1dzV8S71BeX6nf5lvu",
+    "object": "v3.reference.exchange",
+    "code": "EUROTLX",
+    "exchange_name": "EuroTLX",
+    "exchange_local_name": "EuroTLX",
+    "mics": [
+      "ETLX"
+    ],
+    "markets": [
+      "italy"
+    ],
+    "symbol_count": 424
+  },
+  {
+    "id": "exc_RnKqmnmpuSf51211FYXYuT",
+    "object": "v3.reference.exchange",
+    "code": "FRA",
+    "exchange_name": "Frankfurt Stock Exchange",
+    "exchange_local_name": "Frankfurt Stock Exchange (Boerse Frankfurt)",
+    "mics": [
+      "XFRA"
+    ],
+    "markets": [
+      "germany"
+    ],
+    "symbol_count": 3635
+  },
+  {
+    "id": "exc_Nwuq-NHtPnyeSQR5TXhKb5",
+    "object": "v3.reference.exchange",
+    "code": "FSE",
+    "exchange_name": "Fukuoka Stock Exchange",
+    "exchange_local_name": "Fukuoka Stock Exchange",
+    "mics": [
+      "XFKA"
+    ],
+    "markets": [
+      "japan"
+    ],
+    "symbol_count": 38
+  },
+  {
+    "id": "exc_TblwmI30h_lZORNk4BzQZ5",
+    "object": "v3.reference.exchange",
+    "code": "GETTEX",
+    "exchange_name": "Gettex",
+    "exchange_local_name": "gettex (Boerse Muenchen)",
+    "mics": [
+      "MUND",
+      "MUNC"
+    ],
+    "markets": [
+      "germany"
+    ],
+    "symbol_count": 7746
+  },
+  {
+    "id": "exc_DNLYAzMTyyX24Q5ipNxC7F",
+    "object": "v3.reference.exchange",
+    "code": "GPW",
+    "exchange_name": "Warsaw Stock Exchange",
+    "exchange_local_name": "Warsaw Stock Exchange (GPW)",
+    "mics": [
+      "XWAR",
+      "XGLO",
+      "WETP"
+    ],
+    "markets": [
+      "poland"
+    ],
+    "symbol_count": 538
+  },
+  {
+    "id": "exc_RWEOC1vGN7CCmC8VGXNX4G",
+    "object": "v3.reference.exchange",
+    "code": "HAM",
+    "exchange_name": "Hamburg Stock Exchange",
+    "exchange_local_name": "Boerse Hamburg",
+    "mics": [
+      "XHAM"
+    ],
+    "markets": [
+      "germany"
+    ],
+    "symbol_count": 1733
+  },
+  {
+    "id": "exc_J238XiDVJy3UcOMObZxWo9",
+    "object": "v3.reference.exchange",
+    "code": "HAN",
+    "exchange_name": "Hannover Stock Exchange",
+    "exchange_local_name": "Boerse Hannover",
+    "mics": [
+      "XHAN"
+    ],
+    "markets": [
+      "germany"
+    ],
+    "symbol_count": 992
+  },
+  {
+    "id": "exc_OTi1RQzTlJG6ejZjWumdNC",
+    "object": "v3.reference.exchange",
+    "code": "HEL",
+    "exchange_name": "Nasdaq Helsinki",
+    "exchange_local_name": "Nasdaq Helsinki",
+    "mics": [
+      "XHEL",
+      "FSME"
+    ],
+    "markets": [
+      "finland"
+    ],
+    "symbol_count": 238
+  },
+  {
+    "id": "exc_WeGwsMmpCD1d4m3B6F3g8A",
+    "object": "v3.reference.exchange",
+    "code": "HKEX",
+    "exchange_name": "Hong Kong Exchange",
+    "exchange_local_name": "Hong Kong Stock Exchange",
+    "mics": [
+      "XHKG",
+      "XGEM"
+    ],
+    "markets": [
+      "hongkong"
+    ],
+    "symbol_count": 3119
+  },
+  {
+    "id": "exc_IM4IqL-zrnL3aVoB7N6XaM",
+    "object": "v3.reference.exchange",
+    "code": "HNX",
+    "exchange_name": "Hanoi Stock Exchange",
+    "exchange_local_name": "Hanoi Stock Exchange",
+    "mics": [
+      "HSTC"
+    ],
+    "markets": [
+      "vietnam"
+    ],
+    "symbol_count": 286
+  },
+  {
+    "id": "exc_6x9Jj5a6ceggjZTKBCp2V8",
+    "object": "v3.reference.exchange",
+    "code": "HOSE",
+    "exchange_name": "Ho Chi Minh Stock Exchange",
+    "exchange_local_name": "Ho Chi Minh City Stock Exchange",
+    "mics": [
+      "XSTC"
+    ],
+    "markets": [
+      "vietnam"
+    ],
+    "symbol_count": 406
+  },
+  {
+    "id": "exc_21b4a8q18mPdG6d6So1z9Q",
+    "object": "v3.reference.exchange",
+    "code": "ICE",
+    "exchange_name": "Nasdaq Iceland",
+    "exchange_local_name": "Nasdaq Iceland",
+    "mics": [
+      "XICE",
+      "FNIS"
+    ],
+    "markets": [
+      "iceland"
+    ],
+    "symbol_count": 38
+  },
+  {
+    "id": "exc_nEEE5penyhzs9ggFGoR_oz",
+    "object": "v3.reference.exchange",
+    "code": "IDX",
+    "exchange_name": "Indonesia Stock Exchange",
+    "exchange_local_name": "Indonesia Stock Exchange",
+    "mics": [
+      "XIDX"
+    ],
+    "markets": [
+      "indonesia"
+    ],
+    "symbol_count": 975
+  },
+  {
+    "id": "exc_De58mpBuyRwky3ZAzmfCfF",
+    "object": "v3.reference.exchange",
+    "code": "IOB",
+    "exchange_name": "London Stock Exchange (International)",
+    "exchange_local_name": "LSE International Order Book",
+    "mics": [
+      "XLOM",
+      "XLON"
+    ],
+    "markets": [
+      "uk"
+    ],
+    "symbol_count": 991
+  },
+  {
+    "id": "exc_B7r0K6Xn1Kb5adu_D8eRTN",
+    "object": "v3.reference.exchange",
+    "code": "JSE",
+    "exchange_name": "Johannesburg Stock Exchange",
+    "exchange_local_name": "Johannesburg Stock Exchange",
+    "mics": [
+      "XJSE",
+      "ALTX"
+    ],
+    "markets": [
+      "rsa"
+    ],
+    "symbol_count": 319
+  },
+  {
+    "id": "exc_-jJ-gm0eaLVwLBt3tQgRzo",
+    "object": "v3.reference.exchange",
+    "code": "KRX",
+    "exchange_name": "Korea Stock Exchange",
+    "exchange_local_name": "Korea Stock Exchange",
+    "mics": [
+      "XKOS",
+      "XKRX",
+      "XKON"
+    ],
+    "markets": [
+      "korea"
+    ],
+    "symbol_count": 2928
+  },
+  {
+    "id": "exc_zluB_cVQKHogkbvnFbXzti",
+    "object": "v3.reference.exchange",
+    "code": "KSE",
+    "exchange_name": "Kuwait Stock Exchange",
+    "exchange_local_name": "Boursa Kuwait",
+    "mics": [
+      "XKUW"
+    ],
+    "markets": [
+      "kuwait"
+    ],
+    "symbol_count": 137
+  },
+  {
+    "id": "exc_1eKqk9RfLA68xLFBh1tuRV",
+    "object": "v3.reference.exchange",
+    "code": "LJSE",
+    "exchange_name": "Ljubljana Stock Exchange",
+    "exchange_local_name": "Ljubljana Stock Exchange",
+    "mics": [
+      "XLJU",
+      "XLJM"
+    ],
+    "markets": [
+      "slovenia"
+    ],
+    "symbol_count": 15
+  },
+  {
+    "id": "exc_tIrL0Y2Jg6ajbecRyNdNcp",
+    "object": "v3.reference.exchange",
+    "code": "LSE",
+    "exchange_name": "London Stock Exchange",
+    "exchange_local_name": "London Stock Exchange",
+    "mics": [
+      "XLOM",
+      "XLON",
+      "AIMX"
+    ],
+    "markets": [
+      "uk"
+    ],
+    "symbol_count": 5039
+  },
+  {
+    "id": "exc_rdWyP_sdb3KStrbbPJU72o",
+    "object": "v3.reference.exchange",
+    "code": "LSSI",
+    "exchange_name": "Lang & Schwarz Tradecenter",
+    "exchange_local_name": "Lang & Schwarz TradeCenter",
+    "mics": [
+      "LSSI"
+    ],
+    "markets": [
+      "germany"
+    ],
+    "symbol_count": 726
+  },
+  {
+    "id": "exc_KAj6nURunZkGqkR374k0eo",
+    "object": "v3.reference.exchange",
+    "code": "LSX",
+    "exchange_name": "Lang & Schwarz Exchange",
+    "exchange_local_name": "LS Exchange (Lang & Schwarz via Boerse Hamburg)",
+    "mics": [],
+    "markets": [
+      "germany"
+    ],
+    "symbol_count": 974
+  },
+  {
+    "id": "exc_1CGl7fBYdBBaPKOHAd7ZP0",
+    "object": "v3.reference.exchange",
+    "code": "LUXSE",
+    "exchange_name": "Luxembourg Stock Exchange",
+    "exchange_local_name": "Luxembourg Stock Exchange",
+    "mics": [
+      "EMTF",
+      "XLUX"
+    ],
+    "markets": [
+      "luxembourg"
+    ],
+    "symbol_count": 119
+  },
+  {
+    "id": "exc_fuykF4kIBpxoJqJi7FL19D",
+    "object": "v3.reference.exchange",
+    "code": "MIL",
+    "exchange_name": "Euronext Milan",
+    "exchange_local_name": "Borsa Italiana",
+    "mics": [
+      "BGEM",
+      "EXGM",
+      "MTAA",
+      "MIVX",
+      "ATFX"
+    ],
+    "markets": [
+      "italy"
+    ],
+    "symbol_count": 1535
+  },
+  {
+    "id": "exc_XHxVsm94FsgvbmDsLYH2YW",
+    "object": "v3.reference.exchange",
+    "code": "MOEX",
+    "exchange_name": "Russian Exchange",
+    "exchange_local_name": "Moscow Exchange",
+    "mics": [
+      "MISX"
+    ],
+    "markets": [
+      "russia"
+    ],
+    "symbol_count": 463
+  },
+  {
+    "id": "exc_N7E0U7re0SnQra1Eb3RBHp",
+    "object": "v3.reference.exchange",
+    "code": "MUN",
+    "exchange_name": "Munich Stock Exchange",
+    "exchange_local_name": "Boerse Muenchen",
+    "mics": [
+      "XMUN"
+    ],
+    "markets": [
+      "germany"
+    ],
+    "symbol_count": 2442
+  },
+  {
+    "id": "exc_U34f2M7WZPS2zgXhq48lmJ",
+    "object": "v3.reference.exchange",
+    "code": "MYX",
+    "exchange_name": "Bursa Malaysia",
+    "exchange_local_name": "Bursa Malaysia",
+    "mics": [
+      "XKLS",
+      "MESQ"
+    ],
+    "markets": [
+      "malaysia"
+    ],
+    "symbol_count": 1144
+  },
+  {
+    "id": "exc_WgSljoAs0SOYv0jiDtwZy_",
+    "object": "v3.reference.exchange",
+    "code": "NASDAQ",
+    "exchange_name": "Nasdaq Stock Market",
+    "exchange_local_name": "Nasdaq Stock Market",
+    "mics": [
+      "XNCM",
+      "XNGS",
+      "XNMS"
+    ],
+    "markets": [
+      "america"
+    ],
+    "symbol_count": 8648
+  },
+  {
+    "id": "exc_y9Uffqg7RUrEtUQAIcWoce",
+    "object": "v3.reference.exchange",
+    "code": "NDXB",
+    "exchange_name": "Nasdaq Dubai",
+    "exchange_local_name": "Nasdaq Dubai",
+    "mics": [
+      "DIFX"
+    ],
+    "markets": [
+      "uae"
+    ],
+    "symbol_count": 6
+  },
+  {
+    "id": "exc_EBFC0Cwzl_EzYJ8abZ5xv3",
+    "object": "v3.reference.exchange",
+    "code": "NEO",
+    "exchange_name": "Cboe Canada",
+    "exchange_local_name": "Cboe Canada (NEO)",
+    "mics": [
+      "NEOE"
+    ],
+    "markets": [
+      "canada"
+    ],
+    "symbol_count": 2385
+  },
+  {
+    "id": "exc_6AImBug4E5nAQYF4VegZ0D",
+    "object": "v3.reference.exchange",
+    "code": "NEWCONNECT",
+    "exchange_name": "NewConnect",
+    "exchange_local_name": "NewConnect (GPW alt market)",
+    "mics": [
+      "XNCO"
+    ],
+    "markets": [
+      "poland"
+    ],
+    "symbol_count": 338
+  },
+  {
+    "id": "exc_llJQROyT6zgip92SpuJYx6",
+    "object": "v3.reference.exchange",
+    "code": "NGM",
+    "exchange_name": "Nordic Growth Market",
+    "exchange_local_name": "Nordic Growth Market",
+    "mics": [
+      "XSAT",
+      "NSME",
+      "XNGM",
+      "SPDK",
+      "SPNO"
+    ],
+    "markets": [
+      "sweden"
+    ],
+    "symbol_count": 248
+  },
+  {
+    "id": "exc_bFNTDZX1dcb7ewV5s-vO8P",
+    "object": "v3.reference.exchange",
+    "code": "NSE",
+    "exchange_name": "National Stock Exchange of India",
+    "exchange_local_name": "National Stock Exchange of India",
+    "mics": [
+      "XNSE"
+    ],
+    "markets": [
+      "india"
+    ],
+    "symbol_count": 3389
+  },
+  {
+    "id": "exc_G39CjR9Ul9C-bDYR-BSIGC",
+    "object": "v3.reference.exchange",
+    "code": "NSEJP",
+    "exchange_name": "Nagoya Stock Exchange",
+    "exchange_local_name": "Nagoya Stock Exchange",
+    "mics": [
+      "XNGO"
+    ],
+    "markets": [
+      "japan"
+    ],
+    "symbol_count": 113
+  },
+  {
+    "id": "exc_yidwOoLYvOeCJQhl8CKUvk",
+    "object": "v3.reference.exchange",
+    "code": "NSEKE",
+    "exchange_name": "Nairobi Securities Exchange",
+    "exchange_local_name": "Nairobi Securities Exchange",
+    "mics": [
+      "XNAI"
+    ],
+    "markets": [
+      "kenya"
+    ],
+    "symbol_count": 60
+  },
+  {
+    "id": "exc_YgnZ7wQ6Taz36JXG2dZN5P",
+    "object": "v3.reference.exchange",
+    "code": "NSENG",
+    "exchange_name": "Nigerian Stock Exchange",
+    "exchange_local_name": "Nigerian Exchange",
+    "mics": [
+      "XNSA"
+    ],
+    "markets": [
+      "nigeria"
+    ],
+    "symbol_count": 146
+  },
+  {
+    "id": "exc_jHzV2s2fs1Es44xmDb97Tn",
+    "object": "v3.reference.exchange",
+    "code": "NYSE",
+    "exchange_name": "New York Stock Exchange",
+    "exchange_local_name": "New York Stock Exchange",
+    "mics": [
+      "XNYS"
+    ],
+    "markets": [
+      "america"
+    ],
+    "symbol_count": 4540
+  },
+  {
+    "id": "exc_Zb-sJ_e_wl2m17gBEYFB7G",
+    "object": "v3.reference.exchange",
+    "code": "NZX",
+    "exchange_name": "New Zealand Exchange",
+    "exchange_local_name": "New Zealand Exchange",
+    "mics": [
+      "XNZE"
+    ],
+    "markets": [
+      "newzealand"
+    ],
+    "symbol_count": 156
+  },
+  {
+    "id": "exc_mvI97NCH9rz9Rir2wFa2tF",
+    "object": "v3.reference.exchange",
+    "code": "OSL",
+    "exchange_name": "Euronext Oslo",
+    "exchange_local_name": "Euronext Oslo Bors",
+    "mics": [
+      "XOSL",
+      "MERK",
+      "XOAS"
+    ],
+    "markets": [
+      "norway"
+    ],
+    "symbol_count": 403
+  },
+  {
+    "id": "exc_Yp-LaVRV2mgmiiYg26nuB-",
+    "object": "v3.reference.exchange",
+    "code": "OTC",
+    "exchange_name": "OTC Markets",
+    "exchange_local_name": "OTC Markets Group",
+    "mics": [
+      "OOTC"
+    ],
+    "markets": [
+      "america"
+    ],
+    "symbol_count": 13150
+  },
+  {
+    "id": "exc_6PPAD9CX9D9Ox2EdOj4_Jq",
+    "object": "v3.reference.exchange",
+    "code": "PSE",
+    "exchange_name": "Philippine Stock Exchange",
+    "exchange_local_name": "Philippine Stock Exchange",
+    "mics": [
+      "XPHS"
+    ],
+    "markets": [
+      "philippines"
+    ],
+    "symbol_count": 281
+  },
+  {
+    "id": "exc_lxn_kNaEknGkxQY9-aax0J",
+    "object": "v3.reference.exchange",
+    "code": "PSECZ",
+    "exchange_name": "Prague Stock Exchange",
+    "exchange_local_name": "Prague Stock Exchange",
+    "mics": [
+      "XPRM",
+      "XPRA"
+    ],
+    "markets": [
+      "czech"
+    ],
+    "symbol_count": 60
+  },
+  {
+    "id": "exc_YibTXJXdg60cNvQodMCDGX",
+    "object": "v3.reference.exchange",
+    "code": "PSX",
+    "exchange_name": "Pakistan Stock Exchange",
+    "exchange_local_name": "Pakistan Stock Exchange",
+    "mics": [
+      "XKAR"
+    ],
+    "markets": [
+      "pakistan"
+    ],
+    "symbol_count": 482
+  },
+  {
+    "id": "exc_hn_EbGl0H5Zudm5aq01DiR",
+    "object": "v3.reference.exchange",
+    "code": "QSE",
+    "exchange_name": "Qatar Stock Exchange",
+    "exchange_local_name": "Qatar Stock Exchange",
+    "mics": [
+      "DSMD"
+    ],
+    "markets": [
+      "qatar"
+    ],
+    "symbol_count": 56
+  },
+  {
+    "id": "exc_jDmWnTvDHT2LwouRTMOULj",
+    "object": "v3.reference.exchange",
+    "code": "RSE",
+    "exchange_name": "Nasdaq Riga",
+    "exchange_local_name": "Nasdaq Riga",
+    "mics": [
+      "XRIS",
+      "FNLV"
+    ],
+    "markets": [
+      "latvia"
+    ],
+    "symbol_count": 12
+  },
+  {
+    "id": "exc_IoL1UkYX6npRgFwXsY5fo6",
+    "object": "v3.reference.exchange",
+    "code": "SET",
+    "exchange_name": "Stock Exchange of Thailand",
+    "exchange_local_name": "Stock Exchange of Thailand",
+    "mics": [
+      "XBKK",
+      "XMAI"
+    ],
+    "markets": [
+      "thailand"
+    ],
+    "symbol_count": 2365
+  },
+  {
+    "id": "exc_0GtVQTyn6DNNMopm_-9a4l",
+    "object": "v3.reference.exchange",
+    "code": "SGX",
+    "exchange_name": "Singapore Exchange",
+    "exchange_local_name": "Singapore Exchange",
+    "mics": [
+      "XSES",
+      "XSCA"
+    ],
+    "markets": [
+      "singapore"
+    ],
+    "symbol_count": 638
+  },
+  {
+    "id": "exc_ls3wmUjUgZwsJQ18DAkB9M",
+    "object": "v3.reference.exchange",
+    "code": "SIX",
+    "exchange_name": "SIX Swiss Exchange",
+    "exchange_local_name": "SIX Swiss Exchange",
+    "mics": [
+      "XSWX"
+    ],
+    "markets": [
+      "switzerland"
+    ],
+    "symbol_count": 711
+  },
+  {
+    "id": "exc_84EmGxUYzFzOZMdv1M92BY",
+    "object": "v3.reference.exchange",
+    "code": "SSE",
+    "exchange_name": "Shanghai Stock Exchange",
+    "exchange_local_name": "Shanghai Stock Exchange",
+    "mics": [
+      "XSHG"
+    ],
+    "markets": [
+      "china"
+    ],
+    "symbol_count": 2486
+  },
+  {
+    "id": "exc_oGtwO4fWaOSkczArCCL2eP",
+    "object": "v3.reference.exchange",
+    "code": "SSEJP",
+    "exchange_name": "Sapporo Securities Exchange",
+    "exchange_local_name": "Sapporo Securities Exchange",
+    "mics": [
+      "XSAP"
+    ],
+    "markets": [
+      "japan"
+    ],
+    "symbol_count": 21
+  },
+  {
+    "id": "exc_UgKDZRDk0h4TP2rNkscDdM",
+    "object": "v3.reference.exchange",
+    "code": "STO",
+    "exchange_name": "Nasdaq Stockholm",
+    "exchange_local_name": "Nasdaq Stockholm",
+    "mics": [
+      "XSTO",
+      "SSME",
+      "ONSE"
+    ],
+    "markets": [
+      "sweden"
+    ],
+    "symbol_count": 1192
+  },
+  {
+    "id": "exc_C0_797KEWTAVYhY8SdgsTh",
+    "object": "v3.reference.exchange",
+    "code": "STU",
+    "exchange_name": "Stuttgart Stock Exchange",
+    "exchange_local_name": "Boerse Stuttgart",
+    "mics": [
+      "XSTU"
+    ],
+    "markets": [
+      "germany"
+    ],
+    "symbol_count": 2722
+  },
+  {
+    "id": "exc_iXppSwnLDYK5x8xHS4kHCp",
+    "object": "v3.reference.exchange",
+    "code": "SZSE",
+    "exchange_name": "Shenzhen Stock Exchange",
+    "exchange_local_name": "Shenzhen Stock Exchange",
+    "mics": [
+      "XSHE",
+      "XSHG"
+    ],
+    "markets": [
+      "china"
+    ],
+    "symbol_count": 3118
+  },
+  {
+    "id": "exc_ymDIffx2c9CTj7MaX9mgmu",
+    "object": "v3.reference.exchange",
+    "code": "TADAWUL",
+    "exchange_name": "Saudi Exchange",
+    "exchange_local_name": "Saudi Exchange (Tadawul)",
+    "mics": [
+      "XSAU"
+    ],
+    "markets": [
+      "ksa"
+    ],
+    "symbol_count": 417
+  },
+  {
+    "id": "exc_ejBJrWeW_wwO_NZiU3DbNc",
+    "object": "v3.reference.exchange",
+    "code": "TAL",
+    "exchange_name": "Nasdaq Tallinn",
+    "exchange_local_name": "Nasdaq Tallinn",
+    "mics": [
+      "XTAL",
+      "FNEE"
+    ],
+    "markets": [
+      "estonia"
+    ],
+    "symbol_count": 33
+  },
+  {
+    "id": "exc_e7WA-YGSbLvo4HMZMIg3ah",
+    "object": "v3.reference.exchange",
+    "code": "TASE",
+    "exchange_name": "Tel Aviv Stock Exchange",
+    "exchange_local_name": "Tel Aviv Stock Exchange",
+    "mics": [
+      "XTAE"
+    ],
+    "markets": [
+      "israel"
+    ],
+    "symbol_count": 663
+  },
+  {
+    "id": "exc_HSDv36E6itwm2ZIn1hEYxb",
+    "object": "v3.reference.exchange",
+    "code": "TG",
+    "exchange_name": "Tradegate Exchange",
+    "exchange_local_name": "Tradegate Exchange",
+    "mics": [
+      "XGAT"
+    ],
+    "markets": [
+      "germany"
+    ],
+    "symbol_count": 2466
+  },
+  {
+    "id": "exc_qxY7UptIXVtAqqqkaut0x4",
+    "object": "v3.reference.exchange",
+    "code": "TPEX",
+    "exchange_name": "Taipei Exchange",
+    "exchange_local_name": "Taipei Exchange (TPEx)",
+    "mics": [
+      "ROCO",
+      "XTAI"
+    ],
+    "markets": [
+      "taiwan"
+    ],
+    "symbol_count": 1297
+  },
+  {
+    "id": "exc_LkKzOTFyunveu9K--lE3tj",
+    "object": "v3.reference.exchange",
+    "code": "TSE",
+    "exchange_name": "Tokyo Stock Exchange",
+    "exchange_local_name": "Tokyo Stock Exchange",
+    "mics": [
+      "XTKS",
+      "XTAM"
+    ],
+    "markets": [
+      "japan"
+    ],
+    "symbol_count": 4172
+  },
+  {
+    "id": "exc_qWFqcog_iWP5DYQ6h-ia0y",
+    "object": "v3.reference.exchange",
+    "code": "TSX",
+    "exchange_name": "Toronto Stock Exchange",
+    "exchange_local_name": "Toronto Stock Exchange",
+    "mics": [
+      "XTSE"
+    ],
+    "markets": [
+      "canada"
+    ],
+    "symbol_count": 1779
+  },
+  {
+    "id": "exc_OfNbMgrTfGDRjewnsvdhnz",
+    "object": "v3.reference.exchange",
+    "code": "TSXV",
+    "exchange_name": "TSX Venture Exchange",
+    "exchange_local_name": "TSX Venture Exchange",
+    "mics": [
+      "XTSX",
+      "XTNX"
+    ],
+    "markets": [
+      "canada"
+    ],
+    "symbol_count": 1841
+  },
+  {
+    "id": "exc_emxPXuxO-6LK_-Wk1A5VGW",
+    "object": "v3.reference.exchange",
+    "code": "TWSE",
+    "exchange_name": "Taiwan Stock Exchange",
+    "exchange_local_name": "Taiwan Stock Exchange",
+    "mics": [
+      "XTAI",
+      "ROCO"
+    ],
+    "markets": [
+      "taiwan"
+    ],
+    "symbol_count": 1130
+  },
+  {
+    "id": "exc_fsfmHWuPRi3lpDhdoBGGnK",
+    "object": "v3.reference.exchange",
+    "code": "UPCOM",
+    "exchange_name": "Unlisted Public Company Market",
+    "exchange_local_name": "Hanoi Stock Exchange (UPCoM)",
+    "mics": [
+      "XHNX"
+    ],
+    "markets": [
+      "vietnam"
+    ],
+    "symbol_count": 688
+  },
+  {
+    "id": "exc_RAonCaMmCVTLv-q1xHQVHs",
+    "object": "v3.reference.exchange",
+    "code": "VIE",
+    "exchange_name": "Vienna Stock Exchange",
+    "exchange_local_name": "Wiener Borse",
+    "mics": [
+      "WBDM",
+      "WBAH",
+      "WBDP"
+    ],
+    "markets": [
+      "austria"
+    ],
+    "symbol_count": 1062
+  },
+  {
+    "id": "exc_4-9a_TC8yPYjQa6PvyUEdA",
+    "object": "v3.reference.exchange",
+    "code": "VSE",
+    "exchange_name": "Nasdaq Vilnius",
+    "exchange_local_name": "Nasdaq Vilnius",
+    "mics": [
+      "XLIT",
+      "FNLT"
+    ],
+    "markets": [
+      "lithuania"
+    ],
+    "symbol_count": 25
+  },
+  {
+    "id": "exc_t4LpPv-U2dgBKrH1hDtV5a",
+    "object": "v3.reference.exchange",
+    "code": "XETR",
+    "exchange_name": "Deutsche Borse Xetra",
+    "exchange_local_name": "Xetra",
+    "mics": [
+      "XETR"
+    ],
+    "markets": [
+      "germany"
+    ],
+    "symbol_count": 2022
+  },
+  {
+    "id": "exc_1Njrk_B-xiO-4GufshLVF8",
+    "object": "v3.reference.exchange",
+    "code": "ZSE",
+    "exchange_name": "Zagreb Stock Exchange",
+    "exchange_local_name": "Zagreb Stock Exchange",
+    "mics": [
+      "XZAG",
+      "XZAP"
+    ],
+    "markets": [
+      "croatia"
+    ],
+    "symbol_count": 66
+  }
+]

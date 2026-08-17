@@ -1,0 +1,128 @@
+[
+  {
+    "id": "sec_CDZ4OgFoz3NmDxn8bGjEhX",
+    "object": "v3.reference.sector",
+    "name": "Commercial services",
+    "symbol_count": 4062
+  },
+  {
+    "id": "sec_1m8fSYlFR2XYJ7Z3OiN-Xt",
+    "object": "v3.reference.sector",
+    "name": "Communications",
+    "symbol_count": 1232
+  },
+  {
+    "id": "sec_wsZYqw0dIc5qux08y-tehw",
+    "object": "v3.reference.sector",
+    "name": "Consumer durables",
+    "symbol_count": 3447
+  },
+  {
+    "id": "sec_-v18da1BCt0D_6iKC9DsJZ",
+    "object": "v3.reference.sector",
+    "name": "Consumer non-durables",
+    "symbol_count": 4778
+  },
+  {
+    "id": "sec_IWP135GtM98hyhCxp2sP1j",
+    "object": "v3.reference.sector",
+    "name": "Consumer services",
+    "symbol_count": 4002
+  },
+  {
+    "id": "sec_cpFcurFfn5jlpefMMvpJTQ",
+    "object": "v3.reference.sector",
+    "name": "Distribution services",
+    "symbol_count": 2798
+  },
+  {
+    "id": "sec_gZ7j-mEHySZ8BNosDMTRg-",
+    "object": "v3.reference.sector",
+    "name": "Electronic technology",
+    "symbol_count": 7305
+  },
+  {
+    "id": "sec_0I5VnAfLGNQLUQ5oFkndlL",
+    "object": "v3.reference.sector",
+    "name": "Energy minerals",
+    "symbol_count": 2469
+  },
+  {
+    "id": "sec_tpop43sYnVqmJlY9m_kgRk",
+    "object": "v3.reference.sector",
+    "name": "Finance",
+    "symbol_count": 17754
+  },
+  {
+    "id": "sec_ZR68tIlAF_2rpG3Lm8EdO6",
+    "object": "v3.reference.sector",
+    "name": "Government",
+    "symbol_count": 8
+  },
+  {
+    "id": "sec_D7XR-5H8aFA9324LUS63-Y",
+    "object": "v3.reference.sector",
+    "name": "Health services",
+    "symbol_count": 1209
+  },
+  {
+    "id": "sec__bO1Qiw-aELBmQMupyuM9W",
+    "object": "v3.reference.sector",
+    "name": "Health technology",
+    "symbol_count": 7438
+  },
+  {
+    "id": "sec_PjXFEcN8RvP__ijtIYbdIJ",
+    "object": "v3.reference.sector",
+    "name": "Industrial services",
+    "symbol_count": 3769
+  },
+  {
+    "id": "sec_V_tV1_-p4FJ2wCCSrtXOaV",
+    "object": "v3.reference.sector",
+    "name": "Miscellaneous",
+    "symbol_count": 2585
+  },
+  {
+    "id": "sec_JC6OoVZj0uSn5VAtw9qW5r",
+    "object": "v3.reference.sector",
+    "name": "Non-energy minerals",
+    "symbol_count": 9357
+  },
+  {
+    "id": "sec_RKi7gwVe24NIh1WCurJdo7",
+    "object": "v3.reference.sector",
+    "name": "Process industries",
+    "symbol_count": 6901
+  },
+  {
+    "id": "sec_U9RA-b6GeBbfthwJdNad8r",
+    "object": "v3.reference.sector",
+    "name": "Producer manufacturing",
+    "symbol_count": 9362
+  },
+  {
+    "id": "sec__gap1_1FN9Vu0yNQR4mc6n",
+    "object": "v3.reference.sector",
+    "name": "Retail trade",
+    "symbol_count": 3467
+  },
+  {
+    "id": "sec_k9XZvpIlA-s3lw5ZoSrV7j",
+    "object": "v3.reference.sector",
+    "name": "Technology services",
+    "symbol_count": 8683
+  },
+  {
+    "id": "sec_hmikqZds4L8BXdufNmFw9g",
+    "object": "v3.reference.sector",
+    "name": "Transportation",
+    "symbol_count": 2903
+  },
+  {
+    "id": "sec_ga80f2XpKUn5ExkN1MMjvl",
+    "object": "v3.reference.sector",
+    "name": "Utilities",
+    "symbol_count": 2956
+  }
+]
