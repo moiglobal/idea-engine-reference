@@ -4,10 +4,12 @@ Fill in the bracketed parts for your own setup. This is what you reach for in
 six months when you have forgotten the details.
 
 ## What it does
-Emails one investment idea each weekday at [7am, my timezone], chosen by a
+Emails one investment idea on most weekdays at [7am, my timezone], chosen by a
 hard-filter screen and a six-factor value-and-quality score over a [global / US]
 universe, never repeating a name until it reports a new period, with every
-memo carrying an SEC filing-check outcome and absolute valuation figures.
+memo carrying an SEC filing-check outcome and absolute valuation figures. It
+runs every weekday and sends when it has something new; on a thin day it tells
+you it has nothing rather than repeating a name or lowering its standard.
 
 ## Where it lives
 - Server: [provider], IP [address]. Log in: `ssh [user]@[address]`
