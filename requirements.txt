@@ -1,0 +1,5 @@
+requests>=2.31
+PyYAML>=6.0
+anthropic>=0.40
+markdown>=3.5
+python-dotenv>=1.0

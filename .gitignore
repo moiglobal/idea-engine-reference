@@ -1,0 +1,21 @@
+# Never commit secrets, rebuildable caches, or local undo history.
+.env
+data/cache/
+data/working/
+data/*.log
+data/last_run.json
+data/coverage-log.json
+data/universe-survivors.json
+config/backups/
+output/
+
+# Keep data/history.json IN the repository: it is the no-repeat rule's
+# memory of every company already sent. Exclude the whole data folder and a
+# fresh server cheerfully re-sends you companies you have already read.
+
+# Python noise
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
