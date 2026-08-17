@@ -1,0 +1,77 @@
+# THE HARD FILTER
+# A company must pass every rule here to be scored. This stage only narrows
+# the universe. It does not rank anything. Edit freely; the engine reads this
+# file on every run.
+
+country:
+  # Which country a company "belongs to" has two honest answers, and this
+  # setting picks one deliberately:
+  #   domicile = the country of the company itself (address.country_code on
+  #              the roic.ai profile). Most investors mean this one.
+  #   listing  = the country of the exchange (listing_country_code on the
+  #              ticker record). A share of a German company trading in
+  #              London is "GB" on this basis.
+  basis: domicile
+  # ISO-2 country codes. An empty include list means "all countries".
+  # Start with [US] for a fast first run, then add breadth, e.g. [US, GB, CA, JP, DE, FR, CH].
+  include: [US]
+  exclude: []
+  # Cost shortcut, used only when basis is "domicile" and include is not
+  # empty: also prefilter the ticker list on the LISTING country, so the
+  # engine does not have to price every listed company on earth to find the
+  # domiciled ones. The price of the shortcut: a company domiciled in an
+  # included country but listed only elsewhere is missed. Set false for the
+  # complete, much slower version.
+  prefilter_by_listing: true
+
+market_cap:
+  # In US dollars, applied AFTER converting each company's market cap from
+  # its own currency. A $2B floor keeps the first run fast and the names
+  # liquid. Lower to 300000000 ($300M) once you want smaller companies.
+  min_usd: 2000000000
+  max_usd: null          # set a number to cap company size, or leave null
+
+# Drop companies whose roic.ai industry label exactly matches any of these.
+# Copy the exact strings from config/reference/industries.json; the engine
+# warns loudly about a label that matches nothing. Note that roic.ai has NO
+# "SPAC" or "shell company" industry label, so blank-check companies are
+# caught by the keyword filter below instead.
+#
+# THE FINANCIALS DECISION, recorded here deliberately: this scorer cannot
+# rank banks, insurers, and investment vehicles honestly. Every valuation
+# metric divides by enterprise value, which has little meaning for a lender
+# whose debt is raw material rather than financing, and the margin and
+# leverage factors are meaningless for them too. So the default EXCLUDES
+# them, using roic.ai's exact labels. Buffett owns banks and insurers;
+# nothing here says avoid the sector. It says this instrument cannot score
+# it, so analyse financials separately by hand, or build a second factor set
+# (price to tangible book, return on equity, a capital measure) later.
+# Delete lines to let a group back in, knowing its scores will mean little.
+# Real estate investment trusts are left IN: EV-based metrics remain
+# meaningful for property owners.
+exclude_industries:
+  - "Major banks"
+  - "Regional banks"
+  - "Savings banks"
+  - "Investment banks/Brokers"
+  - "Investment managers"
+  - "Investment trusts"
+  - "Finance/Rental/Leasing"
+  - "Financial conglomerates"
+  - "Life/Health insurance"
+  - "Multi-line insurance"
+  - "Property/Casualty insurance"
+  - "Specialty insurance"
+  - "Insurance brokers/Services"
+
+# Drop companies whose name or industry contains any of these (case
+# insensitive). This is what catches blank-check companies on roic.ai.
+exclude_keywords:
+  - "acquisition corp"
+  - "spac"
+  - "blank check"
+
+listing:
+  type: stock            # exclude funds and depositary receipts
+  status: listed         # drop delisted tickers
+  primary_only: true     # one line per company, not every cross-listing

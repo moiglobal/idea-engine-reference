@@ -1,0 +1,48 @@
+# THE SCORING MODEL
+# Each metric is turned into a percentile rank (0 to 1) within the day's
+# survivors. A factor's score is the average of its metrics' percentiles.
+# The composite is the weighted sum of the factor scores, on a 0 to 100 scale.
+# The weights below sum to 100 and are deliberately value-first.
+#
+# To re-weight, change the numbers and keep them summing to 100, or just tell
+# Claude Code "raise valuation to 45 and cut growth to zero".
+#
+# Three definitions are pinned in the code (engine/metrics.py) and must not
+# drift, because two people building "the same" model get different answers
+# without them:
+#   Free cash flow yield is ENTERPRISE-level: (operating cash flow + after-tax
+#     interest - capital expenditure) / enterprise value. The obvious
+#     construction without the interest add-back divides an after-financing
+#     numerator by a pre-financing denominator and flatters leveraged
+#     companies.
+#   ROIC uses NOPAT = EBIT x (1 - the company's own effective tax rate),
+#     the rate computed from the tax expense and pre-tax income lines and
+#     capped to a 0-40% band. Invested capital = total equity + total debt
+#     - cash, with goodwill INCLUDED: acquisitions are capital the owners
+#     paid for.
+#   Every input is converted to US dollars before any ratio is computed.
+
+factors:
+  valuation:                       # cheaper is better
+    weight: 35
+    metrics: [fcf_to_firm_yield, earnings_yield]
+
+  returns_on_capital:              # higher is better
+    weight: 25
+    metrics: [roic_multi_year_avg, roe]
+
+  margin_quality_and_stability:    # higher and steadier is better
+    weight: 15
+    metrics: [gross_margin, operating_margin, margin_stability]
+
+  capital_discipline_consistency:  # shrinking share count, steady ROIC, reliable FCF
+    weight: 15
+    metrics: [share_count_change, roic_consistency, fcf_positive_frequency]
+
+  balance_sheet_strength:          # low leverage, strong coverage
+    weight: 5
+    metrics: [net_debt_to_ebitda, interest_coverage]
+
+  growth_and_reinvestment:         # durable top-line and per-share FCF growth
+    weight: 5
+    metrics: [revenue_cagr, fcf_per_share_cagr]
