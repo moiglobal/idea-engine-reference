@@ -298,11 +298,16 @@ def compute_metrics(record: dict) -> dict:
         fail("missing_revenue", "missing or non-positive revenue")
     if market_cap is None or market_cap <= 0:
         fail("missing_market_cap", "missing market cap")
-    # A share count that moved more than 50% in one adjacent fiscal year is
-    # either a stock split or a data error. The splits list from roic.ai
-    # tells the two apart: a move with a split executed in that window is
-    # real and flagged; a move with no split is treated as a data error and
-    # dropped, with the reason stated.
+    # A share count that moved more than 50% in one adjacent fiscal year
+    # breaks every multi-year comparison built on it. The splits list from
+    # roic.ai explains some of those moves; a split is real and the company
+    # is kept with a flag. The rest are almost always real corporate events
+    # too, not vendor mistakes: an initial public offering converting
+    # preferred stock to common, a large secondary issuance, a merger. On a
+    # live US run in August 2026 this rule caught nine companies in fifty and
+    # every one was an offering or a merger, so it must not call them data
+    # errors. They are excluded because the history is not like-for-like,
+    # which is a different sentence and a different meaning.
     split_years = _split_fiscal_years(record)
     for newer, older in zip(rows, rows[1:]):
         if (newer["shares"] and older["shares"]
@@ -314,10 +319,13 @@ def compute_metrics(record: dict) -> dict:
                     flags.add(f"share count moved {move * 100:.0f}% in fiscal "
                               f"{newer['fiscal_year']}, explained by a stock split")
                 else:
-                    fail("share_count_jump",
+                    fail("share_count_discontinuity",
                          f"share count moved {move * 100:.0f}% in fiscal "
-                         f"{newer['fiscal_year']} with no matching stock split; "
-                         "possible data error, excluded pending a manual check")
+                         f"{newer['fiscal_year']} with no matching stock "
+                         "split, which usually means a public offering, a "
+                         "large share issuance or a merger; the multi-year "
+                         "figures are not like-for-like, so this company is "
+                         "excluded rather than scored")
                     break
     if not out["sanity_ok"]:
         return out

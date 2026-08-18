@@ -8,12 +8,23 @@ memo's structure and writing rules live in the idea-memo skill
 lives in prompts/memo-prompt.md, both of which the owner can read and edit
 without touching code.
 
-Two sections are protected and are enforced HERE, in code, after the model
-has written its draft: the absolute valuation numbers and the closing footer
-stating this is not a recommendation. If a draft comes back without either,
-the missing section is rebuilt deterministically from the working data and
-appended. No instruction, prompt edit, or email reply can remove them,
-because the guarantee does not depend on the model listening.
+Three things are enforced HERE, in code, after the model has written its
+draft, because the guarantee must not depend on the model listening:
+
+  1. The absolute valuation numbers. This section is REBUILT from the working
+     data on every memo, not merely checked for. A draft that keeps the
+     heading and compresses the figures into a sentence is the failure a
+     heading test cannot see, and on a live run in August 2026 the model
+     dropped the protected footer while following the rest of the skill, so
+     the same thing can happen here.
+  2. The closing footer stating this is not a recommendation.
+  3. The SEC filing-check outcome, which the course says is never omitted. It
+     is the only figure in the memo that does not come from the data vendor,
+     and a draft cut short by the token ceiling loses it first, because the
+     skill puts it near the end.
+
+A draft that hits the model's token ceiling is discarded rather than patched:
+it ends mid-sentence, and half a memo is worse than a plain one.
 
 If the Anthropic call is unavailable or fails, a deterministic fallback memo
 is produced from the same working data, so the engine always sends something.
@@ -22,6 +33,7 @@ is produced from the same working data, so the engine always sends something.
 from __future__ import annotations
 
 import json
+import re
 from datetime import date as _date
 
 from .scoring import factor_table, weakest_factors
@@ -33,6 +45,15 @@ PROMPT_PATH = PROJECT_ROOT / "prompts" / "memo-prompt.md"
 FOOTER = ("This is an idea to investigate, not a recommendation. Verify "
           "against primary filings. Reply to this email to refine the engine.")
 ABS_HEADING = "Valuation in absolute terms"
+# Every filing-check outcome sentence in sec_edgar.py opens with this, in all
+# three of its forms, so it is what "the outcome is present" is tested on.
+FILING_MARKER = "Independent check:"
+MAX_MEMO_TOKENS = 4000
+_HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
+# A horizontal rule ends a section too. The memo's footer sits under one, so
+# without this a section that runs to the bottom of the page would swallow it
+# and anything added to that section would land after the footer.
+_RULE_RE = re.compile(r"^\s{0,3}([-*_])\s*(?:\1\s*){2,}$")
 
 
 def _fmt_money(x, unit="$"):
@@ -177,11 +198,24 @@ def build_memo(company: dict, env: dict, working: dict, claude_md: str = "",
                     .replace("{DATA}", json.dumps(data, indent=2, default=str)))
             resp = client.messages.create(
                 model=env.get("ANTHROPIC_MODEL", "claude-opus-5"),
-                max_tokens=2500,
+                max_tokens=MAX_MEMO_TOKENS,
                 system=system,
                 messages=[{"role": "user", "content": user}],
             )
             memo = "".join(getattr(b, "text", "") for b in resp.content).strip()
+            # A draft that ran into the ceiling stops mid-sentence, and what
+            # it loses is whatever the skill puts last: the data caveats and
+            # the filing-check line with them. Throw it away and send the
+            # deterministic memo, which is complete, rather than a memo that
+            # trails off.
+            if getattr(resp, "stop_reason", None) == "max_tokens":
+                if logger:
+                    logger.warning(
+                        f"The memo draft hit the {MAX_MEMO_TOKENS}-token "
+                        "ceiling and was cut off mid-sentence, so it was "
+                        "discarded and the deterministic memo sent instead. Raise "
+                        "MAX_MEMO_TOKENS in engine/memo.py if this repeats.")
+                memo = None
         except Exception as exc:
             if logger:
                 logger.warning(f"Memo via Anthropic failed ({exc}); using the "
@@ -213,10 +247,10 @@ def _prepend_note(memo: str, methodology_note, notice=None) -> str:
     return memo
 
 
-def _absolute_valuation_block(working: dict) -> str:
-    """The protected section 6, built deterministically from the data."""
+def _absolute_valuation_body(working: dict) -> str:
+    """The figures of protected section 6, without their heading."""
     v = working.get("absolute_valuation", {})
-    lines = [f"## {ABS_HEADING}", ""]
+    lines = []
     lines.append(f"- Free cash flow (firm) yield: {_pct(v.get('fcf_to_firm_yield_pct'))}")
     lines.append(f"- Earnings yield (EBIT/EV): {_pct(v.get('earnings_yield_ebit_ev_pct'))}")
     lines.append(f"- EV / EBIT: {_x(v.get('ev_to_ebit'))}")
@@ -231,21 +265,105 @@ def _absolute_valuation_block(working: dict) -> str:
     return "\n".join(lines)
 
 
-def enforce_protected_sections(memo: str, working: dict, logger=None) -> str:
-    """Guarantee sections 6 and 9 in code, whatever the model produced.
+def _absolute_valuation_block(working: dict) -> str:
+    """The protected section 6, heading and all, built from the data."""
+    return f"## {ABS_HEADING}\n\n" + _absolute_valuation_body(working)
 
-    The two protected sections are what stop a relative score from being read
-    as a verdict and a screen output from being read as advice. If the draft
-    lacks either, it is rebuilt from the working data and appended, with a
-    note in the log. This runs on every memo, including the fallback.
+
+def _find_section(memo: str, heading_text: str):
+    """Locate a markdown section by a phrase in its heading.
+
+    Returns (lines, start, end) where start is the heading's line index and
+    end is the first line of the next heading at the same or a shallower
+    level, or None when no heading carries the phrase. Matching is on a
+    phrase rather than the whole line so a model that writes
+    "## 6. Valuation in absolute terms" is still found.
     """
-    lower = memo.lower()
-    if ABS_HEADING.lower() not in lower:
+    lines = memo.splitlines()
+    start = level = None
+    for i, line in enumerate(lines):
+        m = _HEADING_RE.match(line)
+        if m and heading_text.lower() in m.group(2).lower():
+            start, level = i, len(m.group(1))
+            break
+    if start is None:
+        return None
+    end = len(lines)
+    for j in range(start + 1, len(lines)):
+        if _RULE_RE.match(lines[j]):
+            end = j
+            break
+        m = _HEADING_RE.match(lines[j])
+        if m and len(m.group(1)) <= level:
+            end = j
+            break
+    return lines, start, end
+
+
+def _replace_section_body(memo: str, heading_text: str, new_body: str):
+    """Swap a section's body for new_body, keeping the model's own heading.
+
+    Returns the rewritten memo, or None when the heading is absent.
+    """
+    found = _find_section(memo, heading_text)
+    if found is None:
+        return None
+    lines, start, end = found
+    rebuilt = lines[:start + 1] + [""] + new_body.splitlines() + [""] + lines[end:]
+    return "\n".join(rebuilt).rstrip() + "\n"
+
+
+def _append_to_section(memo: str, heading_text: str, text: str):
+    """Add a line to the end of a section. Returns None when it is absent."""
+    found = _find_section(memo, heading_text)
+    if found is None:
+        return None
+    lines, _start, end = found
+    while end > 0 and not lines[end - 1].strip():
+        end -= 1
+    rebuilt = lines[:end] + ["", text] + lines[end:]
+    return "\n".join(rebuilt).rstrip() + "\n"
+
+
+def enforce_protected_sections(memo: str, working: dict, logger=None) -> str:
+    """Guarantee the three protected things in code, whatever the model wrote.
+
+    Run on every memo, including the deterministic one, where it is a no-op.
+
+    Section 6 is REBUILT rather than checked. Testing that the heading exists
+    passes a draft that keeps the heading and drops every figure, which is
+    exactly what an email reply asking for a shorter memo invites. The
+    absolute numbers are what stop a relative score being read as a verdict,
+    so they are written from the working data every time and the model's
+    prose under that heading is discarded.
+
+    The footer and the SEC filing-check outcome are appended when absent. The
+    filing check is the one figure in the memo that does not come from the
+    data vendor, and the course says its outcome is never omitted.
+    """
+    body = _absolute_valuation_body(working)
+    rebuilt = _replace_section_body(memo, ABS_HEADING, body)
+    if rebuilt is None:
         if logger:
             logger.warning("Memo draft was missing the absolute valuation "
                            "section; it was rebuilt from the data and appended.")
         memo = memo.rstrip() + "\n\n" + _absolute_valuation_block(working)
-    if "idea to investigate, not a recommendation" not in lower:
+    else:
+        if logger and body.strip() not in memo:
+            logger.warning("Memo draft did not carry the absolute valuation "
+                           "figures in full; the section was rebuilt from the "
+                           "working data.")
+        memo = rebuilt
+
+    caveat = ((working.get("filing_check") or {}).get("caveat_line") or "").strip()
+    if caveat and FILING_MARKER.lower() not in memo.lower():
+        if logger:
+            logger.warning("Memo draft was missing the SEC filing-check "
+                           "outcome; it was added. The outcome is never omitted.")
+        placed = _append_to_section(memo, "Data caveats", caveat)
+        memo = placed if placed is not None else (memo.rstrip() + "\n\n" + caveat)
+
+    if "idea to investigate, not a recommendation" not in memo.lower():
         if logger:
             logger.warning("Memo draft was missing the protected footer; it was appended.")
         memo = memo.rstrip() + "\n\n---\n" + FOOTER

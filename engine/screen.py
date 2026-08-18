@@ -88,7 +88,7 @@ def _estimate_and_confirm(n_candidates: int, assume_yes: bool, logger) -> None:
 
 def run_screen(api_key: str, universe_cfg: dict, rates: dict, logger=None,
                refresh: bool = False, assume_yes: bool = True,
-               price_map: dict | None = None) -> tuple:
+               price_map: dict | None = None, limit: int = 0) -> tuple:
     """Apply the hard filter. Returns (survivors, stage_counts, exclusions).
 
     survivors: list of candidate dicts (symbol, name, countries, industry,
@@ -96,7 +96,16 @@ def run_screen(api_key: str, universe_cfg: dict, rates: dict, logger=None,
     stage_counts: ordered list of (stage name, count) for the run summary.
     exclusions: how many companies each rule removed, including companies
       excluded because their currency had no available dollar rate.
+
+    limit stops the expensive stages as soon as that many companies have
+    passed, which is what makes a quick test quick. It has to be applied
+    HERE, not to the list this function returns: the cost of a run is one
+    enterprise-value request per ticker and one profile per size survivor,
+    so trimming the output afterwards saves nothing at all. A limited run is
+    a sample of the market in ticker order, not a search of it, and it says
+    so in the log and in the stage names.
     """
+    sampled = bool(limit)
     log = logger
     country_cfg = universe_cfg.get("country", {}) or {}
     basis = (country_cfg.get("basis") or "domicile").strip().lower()
@@ -146,6 +155,12 @@ def run_screen(api_key: str, universe_cfg: dict, rates: dict, logger=None,
     stage_counts.append(("tickers (listed, primary-line stocks)", len(rows)))
     if log:
         log.info(f"Stage 1: {len(rows)} companies after the ticker filters")
+        if sampled:
+            log.warning(
+                f"SAMPLE RUN: stopping each stage at {limit} companies, in "
+                "ticker order. This is a quick test of the machinery, not a "
+                "search of the market, and the idea it produces is the best "
+                "of the sample only. Drop --limit for a real run.")
 
     # --- Stage 2: listing-country filter (only when basis is listing) --------
     if basis == "listing":
@@ -159,7 +174,8 @@ def run_screen(api_key: str, universe_cfg: dict, rates: dict, logger=None,
             log.info(f"Stage 2: {len(rows)} companies after the listing-country filter")
 
     # --- Stage 3: market cap, converted to dollars, floor and ceiling --------
-    _estimate_and_confirm(len(rows), assume_yes, log)
+    if not sampled:
+        _estimate_and_confirm(len(rows), assume_yes, log)
     survivors_caps = []
     for i, r in enumerate(rows, 1):
         if log and i % PROGRESS_EVERY == 0:
@@ -201,7 +217,14 @@ def run_screen(api_key: str, universe_cfg: dict, rates: dict, logger=None,
         r["market_cap_usd"] = cap_usd
         r["market_cap_asof"] = (ev_row or {}).get("period_end_date")
         survivors_caps.append(r)
-    stage_counts.append(("market-cap floor and ceiling (USD)", len(survivors_caps)))
+        if limit and len(survivors_caps) >= limit:
+            if log:
+                log.info(f"Sample reached at {len(survivors_caps)} companies "
+                         f"after {i} of {len(rows)} tickers; stopping stage 3.")
+            break
+    stage_counts.append((("market-cap floor and ceiling (USD), SAMPLE"
+                          if sampled else "market-cap floor and ceiling (USD)"),
+                         len(survivors_caps)))
     if log:
         log.info(f"Stage 3: {len(survivors_caps)} companies after the size filter")
         if fx_missing_by_ccy:
@@ -277,8 +300,15 @@ def run_screen(api_key: str, universe_cfg: dict, rates: dict, logger=None,
             "price_currency": price_info.get("currency"),
             "cik": r.get("cik"),
         }
+        if limit and len(survivors) >= limit:
+            if log:
+                log.info(f"Sample reached at {len(survivors)} companies after "
+                         f"{i} of {len(survivors_caps)} profiles; stopping stage 4.")
+            break
     result = list(survivors.values())
-    stage_counts.append(("domicile, industry and keyword filters", len(result)))
+    stage_counts.append((("domicile, industry and keyword filters, SAMPLE"
+                          if sampled else "domicile, industry and keyword filters"),
+                         len(result)))
     if log:
         log.info(f"Stage 4: {len(result)} companies pass the full hard filter")
         _check_exclusion_labels(exclude_industries, catalogue, universe_industries, log)

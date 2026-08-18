@@ -2,11 +2,21 @@
 
 Sending uses SMTP; reading replies uses IMAP. Both use the dedicated mailbox in
 .env. No web server is needed: the engine polls its own inbox on each run.
+
+Every connection here carries an explicit timeout. Without one, Python blocks
+forever, and a mail port that is dropped rather than refused (a company
+firewall, some home routers, and many cloud providers, which block outbound
+mail on new accounts by default) turns the whole run into a blank window with
+no error and no log line. Under cron that is silent and permanent: the alert
+path is SMTP too, so it hangs alongside the run. Thirty seconds and a logged
+failure is always the better answer.
 """
 
 from __future__ import annotations
 
 import re
+
+TIMEOUT_SECONDS = 30
 
 
 def _md_to_html(markdown_text: str) -> str:
@@ -30,7 +40,8 @@ def send_memo(env: dict, subject: str, markdown_body: str, logger=None) -> None:
     msg.attach(MIMEText(markdown_body, "plain", "utf-8"))
     msg.attach(MIMEText(_md_to_html(markdown_body), "html", "utf-8"))
 
-    with smtplib.SMTP_SSL(env["SMTP_HOST"], int(env["SMTP_PORT"])) as server:
+    with smtplib.SMTP_SSL(env["SMTP_HOST"], int(env["SMTP_PORT"]),
+                          timeout=TIMEOUT_SECONDS) as server:
         server.login(env["ENGINE_EMAIL_ADDRESS"], env["ENGINE_EMAIL_APP_PASSWORD"])
         server.send_message(msg)
     if logger:
@@ -47,7 +58,8 @@ def send_alert(env: dict, subject: str, body: str, logger=None) -> None:
     msg["From"] = env["ENGINE_EMAIL_ADDRESS"]
     msg["To"] = env["RECIPIENT_EMAIL"]
     try:
-        with smtplib.SMTP_SSL(env["SMTP_HOST"], int(env["SMTP_PORT"])) as server:
+        with smtplib.SMTP_SSL(env["SMTP_HOST"], int(env["SMTP_PORT"]),
+                              timeout=TIMEOUT_SECONDS) as server:
             server.login(env["ENGINE_EMAIL_ADDRESS"], env["ENGINE_EMAIL_APP_PASSWORD"])
             server.send_message(msg)
     except Exception as exc:
@@ -93,7 +105,8 @@ def read_replies(env: dict, logger=None) -> list:
 
     texts = []
     try:
-        box = imaplib.IMAP4_SSL(env["IMAP_HOST"], int(env["IMAP_PORT"]))
+        box = imaplib.IMAP4_SSL(env["IMAP_HOST"], int(env["IMAP_PORT"]),
+                                timeout=TIMEOUT_SECONDS)
         box.login(env["ENGINE_EMAIL_ADDRESS"], env["ENGINE_EMAIL_APP_PASSWORD"])
         box.select("INBOX")
         status, data = box.search(None, "UNSEEN")

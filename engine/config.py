@@ -24,6 +24,20 @@ REQUIRED_FOR_RUN = ["ROIC_API_KEY", "SEC_USER_AGENT"]
 RECOMMENDED_FOR_RUN = ["ANTHROPIC_API_KEY"]
 REQUIRED_FOR_EMAIL = ["ENGINE_EMAIL_ADDRESS", "ENGINE_EMAIL_APP_PASSWORD", "RECIPIENT_EMAIL"]
 
+# The values .env.example ships with. Copying the example to .env and running
+# it before filling anything in is the commonest first mistake, and none of
+# these strings is empty, so a plain emptiness test waves them through into a
+# live run that then fails somewhere far from the cause. An unedited setting
+# is a missing setting, and gets the same clear sentence.
+PLACEHOLDER_VALUES = {
+    "your_roic_key_here",
+    "sk-ant-your_key_here",
+    "Your Name your.email@example.com",
+    "yourname.ideaengine@gmail.com",
+    "your_16_character_app_password",
+    "you@example.com",
+}
+
 
 def _load_env_file(path: Path) -> None:
     """Populate os.environ from a .env file without overwriting real env vars."""
@@ -63,11 +77,12 @@ def load_env() -> dict:
 
 
 def missing_settings(env: dict, include_email: bool = True) -> list:
-    """Which required settings are still blank."""
+    """Which required settings are still blank or still the example value."""
     needed = list(REQUIRED_FOR_RUN)
     if include_email:
         needed += REQUIRED_FOR_EMAIL
-    return [k for k in needed if not env.get(k)]
+    return [k for k in needed
+            if not env.get(k) or str(env.get(k)).strip() in PLACEHOLDER_VALUES]
 
 
 def load_yaml(path: Path) -> dict:
