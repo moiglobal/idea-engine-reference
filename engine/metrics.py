@@ -414,11 +414,27 @@ def compute_metrics(record: dict) -> dict:
     a["gross_margin_pct"] = m["gross_margin"] * 100 if m["gross_margin"] is not None else None
 
     # --- Capital discipline and consistency ----------------------------------
-    oldest = rows[-1]
-    s_new, s_old = latest["shares"], oldest["shares"]
-    if s_new is not None and s_old not in (None, 0):
-        m["share_count_change"] = (s_new - s_old) / abs(s_old)
+    # The share-count metric is ANNUALIZED, over the same fixed window the
+    # growth factor uses. It used to measure the raw move from the oldest row
+    # available, which made it a function of how much history roic.ai happens
+    # to carry rather than of what the company did: two identical companies
+    # retiring 3% of their shares a year scored -5.9% on three years of data
+    # and -14.1% on six, and the percentile ranking then compared those two
+    # numbers as though they meant the same thing. A long history beat good
+    # capital allocation, and non-US names, where the history is thinner,
+    # lost twice over. Every other flow metric in this file was already
+    # window-normalized; this one was the exception.
+    span = min(AVG_YEARS, years - 1)
+    s_new = latest["shares"]
+    s_old = rows[span]["shares"] if span >= 1 else None
+    if span >= 1 and s_new and s_old and s_new > 0 and s_old > 0:
+        m["share_count_change"] = (s_new / s_old) ** (1.0 / span) - 1.0
         a["share_count_change_pct"] = m["share_count_change"] * 100
+        a["share_count_window_years"] = span
+        # The cumulative move over the same window, because that is what an
+        # owner actually lived through and it is what the annual rate should
+        # be read against. The memo prints both, and names the window.
+        a["share_count_change_total_pct"] = (s_new / s_old - 1.0) * 100
     pos = sum(1 for x in fcffs_present if x > 0)
     m["fcf_positive_frequency"] = safe_div(pos, len(fcffs_present))
 
@@ -445,7 +461,8 @@ def compute_metrics(record: dict) -> dict:
     a["interest_coverage"] = m["interest_coverage"]
 
     # --- Growth --------------------------------------------------------------
-    span = min(AVG_YEARS, years - 1)
+    # span is the window set in the capital-discipline block above, so growth
+    # and share count are measured over exactly the same years.
     if span >= 1:
         old_rev, new_rev = rows[span]["revenue"], latest["revenue"]
         if old_rev and old_rev > 0 and new_rev and new_rev > 0:

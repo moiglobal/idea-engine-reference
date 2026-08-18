@@ -164,7 +164,9 @@ def build_working_file(company: dict, record: dict, filing_check: dict,
             "effective_tax_rate_latest": a.get("effective_tax_rate_latest"),
             "operating_margin_pct": a.get("operating_margin_pct"),
             "gross_margin_pct": a.get("gross_margin_pct"),
-            "share_count_change_pct": a.get("share_count_change_pct"),
+            "share_count_change_annualized_pct": a.get("share_count_change_pct"),
+            "share_count_change_window_years": a.get("share_count_window_years"),
+            "share_count_change_total_over_window_pct": a.get("share_count_change_total_pct"),
             "revenue_cagr_pct": a.get("revenue_cagr_pct"),
             "interest_coverage": a.get("interest_coverage"),
         },
@@ -423,7 +425,13 @@ def _fallback_memo(company: dict, working: dict) -> str:
     lines.append(f"- ROIC (multi-year avg, goodwill included): {_pct(q.get('roic_multi_year_avg_pct'))}")
     lines.append(f"- Operating margin (avg): {_pct(q.get('operating_margin_pct'))}")
     lines.append(f"- Gross margin (avg): {_pct(q.get('gross_margin_pct'))}")
-    lines.append(f"- Share count change over the period: {_pct(q.get('share_count_change_pct'))}")
+    win = q.get("share_count_change_window_years")
+    total = q.get("share_count_change_total_over_window_pct")
+    window_txt = f" a year over {win} years" if win else " a year"
+    total_txt = f" ({_pct(total)} in total)" if total is not None else ""
+    lines.append(f"- Share count change: "
+                 f"{_pct(q.get('share_count_change_annualized_pct'))}"
+                 f"{window_txt}{total_txt}")
     lines.append(f"- Revenue growth (CAGR): {_pct(q.get('revenue_cagr_pct'))}")
     lines.append(f"- Interest coverage: {_x(q.get('interest_coverage'))}")
     lines.append("")
