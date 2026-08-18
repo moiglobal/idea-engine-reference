@@ -55,8 +55,10 @@ def run_live(args) -> int:
     need_email = not args.dry_run
     missing = config.missing_settings(env, include_email=need_email)
     if missing:
-        logger.error(f"Missing settings in .env: {', '.join(missing)}. "
-                     f"Copy .env.example to .env and fill them in.")
+        logger.error(
+            f"Missing or still-unedited settings in .env: {', '.join(missing)}. "
+            "Copy .env.example to .env and replace the example values with "
+            "your own. A setting left at its example value counts as missing.")
         return 2
     if not env.get("ANTHROPIC_API_KEY"):
         logger.warning("ANTHROPIC_API_KEY is not set: the memo will use the "
@@ -115,12 +117,14 @@ def run_live(args) -> int:
 
         # 3. Screen, in stages, with counts.
         timed("screen")
+        # The limit goes INTO the screen, not onto its result. Nearly all the
+        # cost of a run is one enterprise-value request per ticker and one
+        # profile per size survivor, so trimming the survivor list afterwards
+        # would save nothing and still take the better part of an hour.
         survivors, stage_counts, exclusions = screen.run_screen(
             env["ROIC_API_KEY"], universe_cfg, rates, logger=logger,
-            refresh=args.refresh, assume_yes=(args.yes or not sys.stdin.isatty()))
-        if args.limit:
-            survivors = survivors[: args.limit]
-            logger.info(f"Limited to {len(survivors)} companies for this run.")
+            refresh=args.refresh, assume_yes=(args.yes or not sys.stdin.isatty()),
+            limit=args.limit)
 
         # 4. Pull, convert, and score.
         timed("pull and score")
@@ -208,12 +212,24 @@ def run_live(args) -> int:
             return 0
 
         # A thin pool is a warning, not an applied change, so it travels as a
-        # separate notice: it must never carry the "reply undo" offer.
-        notice = None
+        # separate notice: it must never carry the "reply undo" offer. A
+        # sampled run travels the same way, and it matters more, because the
+        # memo otherwise reads as the best idea in the market when it is the
+        # best idea in a few dozen tickers.
+        notices = []
+        if args.limit:
+            notices.append(
+                f"SAMPLE RUN. Started with --limit {args.limit}, so the engine "
+                f"stopped screening at {len(scored)} scored companies in ticker "
+                "order instead of searching the whole universe. The company "
+                "below is the best of that sample, not the best available "
+                "idea. Run without --limit for a real one.")
         low_pool = n_eligible < LOW_POOL_THRESHOLD
-        if low_pool:
-            notice = (f"Only {n_eligible} eligible companies today. Your filter "
-                      f"may be too tight; consider loosening it.")
+        if low_pool and not args.limit:
+            notices.append(f"Only {n_eligible} eligible companies today. Your "
+                           "filter may be too tight; consider loosening it.")
+        notice = " ".join(notices) or None
+        if notice:
             logger.warning(notice)
 
         # 7. The filing check, before any memo is emailed.
@@ -248,7 +264,15 @@ def run_live(args) -> int:
 
         # 10. History, coverage, and the summary.
         timed("record and summarize")
-        dedup.record_sent(chosen, history)
+        if need_email:
+            dedup.record_sent(chosen, history)
+        else:
+            # Nothing was sent, so nothing is recorded as sent. Writing here
+            # would quietly retire the company under the no-repeat rule and
+            # the reader would never see it in his inbox, with no way to tell
+            # why his test run had cost him the idea.
+            logger.info(f"Dry run: {chosen['symbol']} was NOT recorded as sent, "
+                        "so it stays eligible for a real run.")
         _append_coverage_log(drop_reasons, fx_dropped_by_ccy)
         finish_timing()
         summary = {
@@ -500,7 +524,7 @@ def run_selftest() -> int:
             row["bs_sh_out"] *= 2
     unexplained = currency.convert_record(json.loads(json.dumps(split_rec)), rates)
     m_bad = metrics.compute_metrics(unexplained)
-    ok(not m_bad["sanity_ok"] and "share_count_jump" in m_bad["drop_codes"],
+    ok(not m_bad["sanity_ok"] and "share_count_discontinuity" in m_bad["drop_codes"],
        "a doubled share count with NO split on record is dropped as a data error")
     split_rec["splits"] = [{"execution_date": "2023-06-15", "split_from": 1,
                             "split_to": 2, "factor": 2.0}]
@@ -532,6 +556,48 @@ def run_selftest() -> int:
        "a memo missing the absolute valuation section gets it restored")
     ok("idea to investigate, not a recommendation" in enforced,
        "a memo missing the footer gets it restored")
+
+    # The failure a heading test cannot see: the model keeps the heading,
+    # numbers its sections its own way, and compresses the figures into a
+    # sentence. Rebuilding rather than checking is what makes this safe.
+    working_full = {
+        "absolute_valuation": {
+            "fcf_to_firm_yield_pct": 9.2, "earnings_yield_ebit_ev_pct": 11.5,
+            "ev_to_ebit": 8.7, "price_to_tangible_book": 5.9,
+            "net_debt_to_ebitda": -0.5, "enterprise_value_usd": 2.8e9,
+            "avg_fcff_5y_usd": 2.565e8},
+        "market_cap_asof": "2025-12-31",
+        "filing_check": {"caveat_line": "Independent check: revenue and cash "
+                                        "flow agree with the SEC filing within "
+                                        "1 percent."},
+    }
+    shortened = ("# Alpha Co\n\n## 6. Valuation in absolute terms\n\n"
+                 "Cheap on the numbers.\n\n## 7. Bear case\n\nRates.\n\n"
+                 "## 8. Data caveats\n\nSix years of statements.\n\n---\n"
+                 "This is an idea to investigate, not a recommendation.\n")
+    rebuilt = memo_mod.enforce_protected_sections(shortened, working_full)
+    ok(all(label in rebuilt for label in
+           ("Free cash flow (firm) yield", "Earnings yield (EBIT/EV)",
+            "EV / EBIT", "Price / tangible book", "Net debt / EBITDA",
+            "Enterprise value", "5y average free cash flow")),
+       "a draft that keeps the heading but drops the figures gets all seven back")
+    ok("Cheap on the numbers." not in rebuilt,
+       "the model's prose under the protected heading is replaced, not appended to")
+    ok("## 7. Bear case" in rebuilt and "## 6. Valuation" in rebuilt,
+       "rebuilding section 6 leaves the surrounding sections and numbering alone")
+
+    # The filing-check outcome is the one figure that does not come from the
+    # data vendor, and the course says it is never omitted.
+    no_filing = ("# Alpha Co\n\n## Data caveats\n\nSix years.\n\n---\n"
+                 "This is an idea to investigate, not a recommendation.\n")
+    with_filing = memo_mod.enforce_protected_sections(no_filing, working_full)
+    ok("Independent check:" in with_filing,
+       "a memo missing the SEC filing-check outcome gets it added")
+    ok(with_filing.index("Independent check:") < with_filing.index("---"),
+       "the filing-check outcome lands inside the data caveats, not after the footer")
+    ok(memo_mod.enforce_protected_sections(with_filing, working_full).count(
+           "Independent check:") == 1,
+       "enforcing twice does not duplicate the filing-check outcome")
 
     # --- 6. The full pipeline on six fictional companies ---------------------
     records = [
@@ -594,11 +660,17 @@ def run_selftest() -> int:
     memo_md = memo_mod.build_memo(chosen, env={}, working=working,
                                   claude_md="Value investor. Plain English.")
     print(memo_md)
-    assert "Valuation in absolute terms" in memo_md
+    # Assert on the figures themselves, not on the heading above them. A
+    # heading test passes a memo that has lost every number under it.
+    for label in ("Free cash flow (firm) yield", "Earnings yield (EBIT/EV)",
+                  "EV / EBIT", "Price / tangible book", "Net debt / EBITDA",
+                  "Enterprise value", "5y average free cash flow"):
+        assert label in memo_md, f"protected valuation figure missing: {label}"
     assert "idea to investigate, not a recommendation" in memo_md
     assert "Independent check" in memo_md
     print(f"\nSelf-test complete: {checks} checks passed, ranking verified, "
-          "memo carries both protected sections and the filing-check line.")
+          "memo carries every protected valuation figure, the footer and the "
+          "filing-check line.")
     return 0
 
 

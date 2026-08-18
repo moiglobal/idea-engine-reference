@@ -8,6 +8,34 @@ This engine matches the course as revised on 10 August 2026: market data from ro
 
 This is an idea funnel for your own research. It is not investment advice. The memos are built from third-party data and, when an Anthropic key is present, a language model's synthesis of it, both of which can be wrong. Verify everything against primary filings before acting.
 
+## If you are taking the course, start here
+
+Do not type the commands in this file. The course's whole method is that you
+work in plain English and Claude Code does the typing, and that works just as
+well on this folder as on the one you are building yourself.
+
+Download this repository (green **Code** button, then **Download ZIP**),
+unzip it, then open the unzipped folder in Claude Code, set the permission
+mode to Manual, and ask for what you want:
+
+> Set up this project and run its offline self-test, then show me the output.
+
+It will create the virtual environment, install what the engine needs, and
+show you 27 checks passing. No keys and no internet connection are required
+for that. From there, ask it to explain any file you are curious about, or to
+compare a file against the one in your own engine. Reading `scoring.py`,
+`metrics.py`, `currency.py`, `dedup.py` and `feedback.py` with Claude Code
+explaining as you go is the fastest way to see how the pieces fit.
+
+Two honest limits. This is a worked example, not a shortcut past the lessons:
+the engine you build yourself is the one you will understand well enough to
+change, and the settings here are the author's, not yours. And the rest of
+this file is written for someone comfortable reading code, so let Claude Code
+translate it rather than fighting it.
+
+When you get stuck, ask Claude Code to explain what it sees, then post in the
+comments under the lesson on latticework.com.
+
 ## What it does each run
 
 1. Reads the engine mailbox for replies and applies your feedback to the config, with backup, log, and undo.
@@ -57,7 +85,7 @@ The files worth reading first are `scoring.py`, `metrics.py`, `currency.py`, `de
 python run_engine.py --selftest
 ```
 
-No keys, no network. It unit-tests the currency conversion (including pence and a deliberately missing rate), the two locked definitions (enterprise-level free cash flow yield and ROIC with the tax-rate cap), the no-repeat rule, the filing-check comparator against canned filings, and the code that restores the memo's protected sections; then it runs the full scoring pipeline on six fictional companies, one of which keeps euro books under a dollar market cap. You should see 21 checks pass and the line "PASS: the cheapest, highest-quality company ranked first."
+No keys, no network. It unit-tests the currency conversion (including pence and a deliberately missing rate), the two locked definitions (enterprise-level free cash flow yield and ROIC with the tax-rate cap), the no-repeat rule, the filing-check comparator against canned filings, and the code that restores the memo's protected sections; then it runs the full scoring pipeline on six fictional companies, one of which keeps euro books under a dollar market cap. You should see 27 checks pass and the line "PASS: the cheapest, highest-quality company ranked first."
 
 You need Python 3.10 or newer. Install dependencies first, in a virtual environment:
 
@@ -68,9 +96,15 @@ pip install -r requirements.txt
 ```
 Windows (PowerShell):
 ```
-python -m venv venv ; .\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+python -m venv venv
+venv\Scripts\python.exe -m pip install -r requirements.txt
+venv\Scripts\python.exe run_engine.py --selftest
 ```
+The Windows lines call the environment's own Python directly instead of
+activating it. Activating means running `venv\Scripts\Activate.ps1`, and a
+default Windows PowerShell refuses to run scripts at all, which stops people
+here more often than anything else in this file. Calling the executable
+sidesteps the question.
 
 ## Live runs
 
@@ -84,14 +118,30 @@ python run_engine.py                        # the real daily run
 python run_engine.py --refresh              # ignore caches and refetch
 ```
 
+`--limit 50` stops every stage of the screen once 50 companies have passed
+it, which turns a first run from something near an hour into about a minute.
+It is a test of the machinery, not a search of the market: it walks the
+ticker list in order, so it reports on the first companies alphabetically
+rather than the best ones available. The run says so in the log, and the memo
+carries the same warning at the top. Drop the flag for a real run.
+
+A dry run does not record the company it picks, so testing never costs you an
+idea you have not read yet.
+
 Without an Anthropic key the engine still runs end to end and writes a
 deterministic memo from the same data; the language model only ever phrases
 numbers the engine computed.
 
-The first full run is the expensive one: roughly one enterprise-value request
-per candidate, one profile per size survivor, and three statement requests
-per scored survivor. The engine prints that arithmetic before starting and,
-at a keyboard, asks before a big cold run. Everything is cached under
+The first full run is the expensive one: one enterprise-value request per
+candidate, one profile per size survivor, then four requests per scored
+survivor (three statements and the stock-splits list, plus a fifth when a
+company's profile carries no reporting calendar). Measured on 18 August 2026
+against a US-only, $2B universe: 8,551 tickers, 1,809 above the floor, 1,336
+through the full filter, 10,469 requests, about 35 minutes. That is roughly
+300 requests a minute, which is the Individual plan's ceiling, so on that
+plan expect the engine to spend part of the run waiting. The engine prints
+the arithmetic before starting and, at a keyboard, asks before a big cold
+run. Everything is cached under
 `data/cache/`, so later runs refetch only what has aged out: statements
 refresh when a company reports a new period or after 30 days, market caps
 daily, prices daily in bulk, the ticker list weekly.
