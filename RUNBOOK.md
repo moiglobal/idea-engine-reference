@@ -35,7 +35,7 @@ you it has nothing rather than repeating a name or lowering its standard.
 
 ## Run it by hand
 - Offline logic check: `python run_engine.py --selftest`
-  (no keys, no network; 27 unit checks plus the full scoring pipeline)
+  (no keys, no network; 31 unit checks plus the full scoring pipeline)
 - Quick live test, no email: `python run_engine.py --dry-run --limit 50`
 - Full run now: `python run_engine.py`
 - Force fresh data (ignore cache): add `--refresh`

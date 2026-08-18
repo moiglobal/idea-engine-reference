@@ -1,8 +1,10 @@
 # About me and this project
 
 I am a long-term, value-oriented investor in the Buffett and Munger tradition.
-This project is an engine that surfaces one investment idea each working day
-that fits my criteria, and emails me a one-page memo on it.
+This project is an engine that surfaces one investment idea on most working
+days that fits my criteria, and emails me a one-page memo on it. It runs every
+weekday and sends when it has something new; on a thin day it tells me it has
+nothing rather than repeating a name or lowering its standard.
 
 # What I care about in a business
 

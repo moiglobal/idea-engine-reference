@@ -525,7 +525,7 @@ def run_selftest() -> int:
     unexplained = currency.convert_record(json.loads(json.dumps(split_rec)), rates)
     m_bad = metrics.compute_metrics(unexplained)
     ok(not m_bad["sanity_ok"] and "share_count_discontinuity" in m_bad["drop_codes"],
-       "a doubled share count with NO split on record is dropped as a data error")
+       "a doubled share count with NO split on record is dropped as a discontinuity")
     split_rec["splits"] = [{"execution_date": "2023-06-15", "split_from": 1,
                             "split_to": 2, "factor": 2.0}]
     explained = currency.convert_record(split_rec, rates)
@@ -598,6 +598,34 @@ def run_selftest() -> int:
     ok(memo_mod.enforce_protected_sections(with_filing, working_full).count(
            "Independent check:") == 1,
        "enforcing twice does not duplicate the filing-check outcome")
+
+    # --- 5c. Share count is annualized, so history length cannot drive it ---
+    # The regression this guards: measuring the raw move from the oldest row
+    # available made an identical buyback look more than twice as good on six
+    # years of data as on three, and the percentile ranking compared the two
+    # directly. roic.ai's history depth varies by domicile, so the old metric
+    # quietly paid companies for being American.
+    def _buyback(n_years, drift):
+        rec = _synth(f"BB{n_years}", f"BB{n_years}", rev0=1000, growth=0.08,
+                     op_margin=0.25, gross_margin=0.55, shares0=100,
+                     share_drift=drift, debt=500, cash=200, equity=2000,
+                     capex_ratio=0.04, market_cap=3000, price=30)
+        for kind in ("income", "balance", "cashflow"):
+            rec[kind] = rec[kind][:n_years]
+        return metrics.compute_metrics(currency.convert_record(rec, rates))
+
+    short_hist, long_hist = _buyback(3, -0.03), _buyback(6, -0.03)
+    ok(abs(short_hist["metrics"]["share_count_change"]
+           - long_hist["metrics"]["share_count_change"]) < 1e-6,
+       "the same buyback rate scores the same on three and on six years of history")
+    ok(abs(short_hist["metrics"]["share_count_change"] + 0.03) < 1e-6,
+       "a 3% annual buyback reads as -3% a year, not as its cumulative total")
+    ok(_buyback(3, -0.05)["metrics"]["share_count_change"]
+       < _buyback(6, -0.02)["metrics"]["share_count_change"],
+       "the faster buyer ranks ahead of the slower one whatever their histories")
+    ok(short_hist["absolutes"]["share_count_window_years"] == 2
+       and long_hist["absolutes"]["share_count_window_years"] == 5,
+       "the memo can name the window, because the window is recorded")
 
     # --- 6. The full pipeline on six fictional companies ---------------------
     records = [

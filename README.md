@@ -4,6 +4,11 @@
 
 The engine is an idea funnel for your own research, not investment advice. Licensed MIT; see LICENSE.
 
+It emails one idea on most working days. It runs every weekday and sends when
+it has something new; on a thin day it tells you it has nothing rather than
+repeating a name or lowering its standard. That wording is deliberate and it
+is what the engine actually does.
+
 This engine matches the course as revised on 10 August 2026: market data from roic.ai, an explicit currency-conversion step, and SEC EDGAR as the free, independent check on every idea. It was live-tested against both roic.ai and EDGAR on 10 August 2026.
 
 This is an idea funnel for your own research. It is not investment advice. The memos are built from third-party data and, when an Anthropic key is present, a language model's synthesis of it, both of which can be wrong. Verify everything against primary filings before acting.
@@ -21,7 +26,7 @@ mode to Manual, and ask for what you want:
 > Set up this project and run its offline self-test, then show me the output.
 
 It will create the virtual environment, install what the engine needs, and
-show you 27 checks passing. No keys and no internet connection are required
+show you 31 checks passing. No keys and no internet connection are required
 for that. From there, ask it to explain any file you are curious about, or to
 compare a file against the one in your own engine. Reading `scoring.py`,
 `metrics.py`, `currency.py`, `dedup.py` and `feedback.py` with Claude Code
@@ -85,7 +90,7 @@ The files worth reading first are `scoring.py`, `metrics.py`, `currency.py`, `de
 python run_engine.py --selftest
 ```
 
-No keys, no network. It unit-tests the currency conversion (including pence and a deliberately missing rate), the two locked definitions (enterprise-level free cash flow yield and ROIC with the tax-rate cap), the no-repeat rule, the filing-check comparator against canned filings, and the code that restores the memo's protected sections; then it runs the full scoring pipeline on six fictional companies, one of which keeps euro books under a dollar market cap. You should see 27 checks pass and the line "PASS: the cheapest, highest-quality company ranked first."
+No keys, no network. It unit-tests the currency conversion (including pence and a deliberately missing rate), the two locked definitions (enterprise-level free cash flow yield and ROIC with the tax-rate cap), the no-repeat rule, the filing-check comparator against canned filings, the code that rebuilds the memo's protected sections and guarantees the filing-check line, and the annualized share-count metric; then it runs the full scoring pipeline on six fictional companies, one of which keeps euro books under a dollar market cap. You should see 31 checks pass and the line "PASS: the cheapest, highest-quality company ranked first."
 
 You need Python 3.10 or newer. Install dependencies first, in a virtual environment:
 
