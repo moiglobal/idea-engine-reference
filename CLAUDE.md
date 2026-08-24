@@ -22,6 +22,8 @@ nothing rather than repeating a name or lowering its standard.
 
 # How I want you to work
 
+- This is a Python project. Everything you run goes through the virtual
+  environment in this folder.
 - Compute ratios from raw financial statements, never from precomputed ratio fields.
 - Currency is handled once, on fetch: no calculation may combine two figures
   unless both have been converted to US dollars. A missing exchange rate
